@@ -1,1 +1,0 @@
-import{r as e}from"./framework-CXnKph_e.js";import{t}from"./PracticalGuide-Da4l_E3K.js";var n=e();function r(){return(0,n.jsx)(t,{})}export{r as default};
