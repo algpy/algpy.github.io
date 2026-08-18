@@ -1,16 +1,182 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="0; url=/nordic-dubai-field-guide/">
-    <link rel="canonical" href="https://algpy.me/nordic-dubai-field-guide/">
-    <title>Nordic travel guide</title>
+    <meta name="description" content="Peiyan Gu is an M.S. candidate at ShanghaiTech University working on machine learning, computer vision, and open-world learning.">
+    <meta name="theme-color" content="#1f4e79">
+    <title>Peiyan Gu | Machine Learning Researcher</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <p>Opening <a href="/nordic-dubai-field-guide/">the Nordic travel guide</a>...</p>
-    <script>
-      window.location.replace("/nordic-dubai-field-guide/" + window.location.search + window.location.hash);
-    </script>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#about" aria-label="Peiyan Gu home">
+          <span class="brand-name">Peiyan Gu</span>
+          <span class="brand-meta">Machine learning researcher</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#education">Education &amp; service</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="shell hero" id="about">
+        <div class="hero-copy">
+          <p class="eyebrow">ShanghaiTech University</p>
+          <h1>Peiyan Gu</h1>
+          <p class="hero-role">M.S. candidate in Computer Science and Technology</p>
+          <p class="hero-summary">I study category discovery: how a visual model can transfer structure from labeled classes, identify previously unseen classes, and decide when a new category should be created from streaming data. My work spans knowledge distillation, representation learning, and Bayesian nonparametrics.</p>
+          <div class="hero-links" aria-label="Contact links">
+            <a href="mailto:peiyangu@outlook.com">Email</a>
+            <a href="https://www.shanghaitech.edu.cn/" target="_blank" rel="noreferrer">ShanghaiTech University</a>
+          </div>
+        </div>
+        <figure class="portrait">
+          <div class="portrait-frame">
+            <img src="./profile.jpg" alt="Portrait of Peiyan Gu" fetchpriority="high">
+          </div>
+          <figcaption>Peiyan Gu · Shanghai, China</figcaption>
+        </figure>
+      </section>
+
+      <section class="shell facts" aria-label="Academic facts">
+        <div><span>Publication record</span><strong>ICCV 2023 · ECCV 2026</strong></div>
+        <div><span>Current focus</span><strong>Online category discovery</strong></div>
+        <div><span>Academic record</span><strong>GPA 3.72 / 4.00</strong></div>
+      </section>
+
+      <section class="shell section" id="research">
+        <div class="section-heading">
+          <p class="section-label">01 / Research</p>
+          <div>
+            <h2>Category discovery from closed-set supervision to streaming inference.</h2>
+            <p class="section-intro">My projects follow one technical question across three settings: novel class discovery, generalized category discovery, and on-the-fly category discovery.</p>
+          </div>
+        </div>
+        <div class="research-grid">
+          <div class="research-copy">
+            <p class="body-copy">In novel class discovery, I use the predictions of a known-class model as a representation of how each unseen class relates to the known label space. In generalized category discovery, I extended that transfer mechanism from logits to feature representations so known and novel categories can be discovered together.</p>
+            <p class="body-copy">My current work treats category birth as an explicit statistical decision. Instead of creating a class only when a matching heuristic fails, DP-BOA compares posterior-predictive evidence for assigning a sample to an existing category against evidence for spawning a new one.</p>
+          </div>
+          <div class="research-areas">
+            <p class="subheading">Research areas</p>
+            <ul>
+              <li>Machine learning</li>
+              <li>Computer vision</li>
+              <li>Weakly and unsupervised learning</li>
+              <li>Multimodal learning</li>
+              <li>Novel and generalized category discovery</li>
+              <li>Open-world and online learning</li>
+            </ul>
+            <p class="subheading technical-heading">Technical toolkit</p>
+            <p class="technical-copy">Python, PyTorch, C/C++, and MATLAB. Relevant training includes machine learning, deep learning, convex optimization, reinforcement learning, computer vision, geometric computer vision, matrix computation, and natural language processing.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="publications">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-label">02 / Publications</p>
+            <div>
+              <h2>Selected research</h2>
+              <p class="section-intro">Two projects on transferring knowledge to unknown classes and discovering new categories online.</p>
+            </div>
+          </div>
+          <ol class="publication-list">
+            <li class="publication">
+              <p class="publication-year">2023</p>
+              <div>
+                <p class="publication-venue">ICCV 2023 · Co-first author</p>
+                <h3>Class-relation Knowledge Distillation for Novel Class Discovery</h3>
+                <p class="publication-authors"><strong>Peiyan Gu</strong>, Chuyu Zhang, Ruijie Xu, and Xuming He</p>
+                <p class="publication-summary">Novel class discovery learns unlabeled categories using supervision from labeled known classes. This paper represents each novel class by the predicted class distribution of a model trained on known categories, making relations between known and novel classes explicit.</p>
+                <dl class="publication-details">
+                  <div><dt>Method</dt><dd>A class-relation knowledge-distillation objective prevents relation information from fading during discovery. A learnable per-sample weighting function adapts transfer strength according to semantic similarity between known and novel classes.</dd></div>
+                  <div><dt>Evaluation</dt><dd>Evaluated on CIFAR100, Stanford Cars, CUB, and FGVC-Aircraft; the method exceeded prior state of the art by a significant margin on almost all benchmarks.</dd></div>
+                </dl>
+                <a class="paper-link" href="https://doi.org/10.1109/ICCV51070.2023.01510" target="_blank" rel="noreferrer">Read the paper (DOI)</a>
+              </div>
+            </li>
+            <li class="publication">
+              <p class="publication-year">2026</p>
+              <div>
+                <p class="publication-venue">ECCV 2026 · First author · Accepted</p>
+                <h3>DP-BOA: Dirichlet-Process Birth-or-Assign for On-the-Fly Category Discovery</h3>
+                <p class="publication-authors"><strong>Peiyan Gu</strong>, Zixin Teng, and Xuming He</p>
+                <p class="publication-summary">On-the-fly category discovery must decide, for every incoming sample, whether to assign it to an existing category or create a new one. DP-BOA replaces radius- and hash-based birth heuristics with an explicit posterior-predictive comparison.</p>
+                <dl class="publication-details">
+                  <div><dt>Method</dt><dd>An online Dirichlet-process Gaussian mixture with a Normal-Inverse-Wishart prior. Labeled data calibrates a shared prior and warm-starts known-category posteriors; test samples are classified and category statistics are updated online.</dd></div>
+                  <div><dt>Decision rule</dt><dd>For each sample, DP-BOA compares predictive evidence for every existing category with evidence for a new category induced by the Dirichlet-process prior.</dd></div>
+                  <div><dt>Results</dt><dd>Across standard on-the-fly discovery benchmarks, the method consistently outperformed strong baselines, with particularly strong novel-class discovery while retaining competitive known-class accuracy.</dd></div>
+                </dl>
+                <a class="paper-link" href="https://arxiv.org/abs/2607.13504" target="_blank" rel="noreferrer">Read the preprint (arXiv)</a>
+              </div>
+            </li>
+          </ol>
+          <div class="highlight">
+            <p class="subheading">Research highlight</p>
+            <p><strong>OOD-CV SSB 2023:</strong> Extended the ICCV transfer strategy from logits to feature representations for generalized category discovery and won the ImageNet-1k track.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell section" id="education">
+        <div class="section-heading">
+          <p class="section-label">03 / Education &amp; service</p>
+          <div>
+            <h2>Academic training and community work.</h2>
+            <p class="section-intro">Alongside research, I contribute through peer review and teaching.</p>
+          </div>
+        </div>
+        <div class="education-grid">
+          <div>
+            <p class="subheading">Education</p>
+            <div class="timeline-item">
+              <h3>ShanghaiTech University</h3>
+              <p>M.S. in Computer Science and Technology <span>Sep 2023 - present</span></p>
+              <p>B.S. in Computer Science and Technology <span>Sep 2019 - Jul 2023</span></p>
+              <p class="emphasis">M.S. GPA 3.72 / 4.00 · Major GPA 3.77 / 4.00<br>B.S. GPA 3.70 / 4.00</p>
+            </div>
+          </div>
+          <div>
+            <p class="subheading">Service and teaching</p>
+            <div class="timeline-item">
+              <p>Reviewer for CVPR, ECCV, NeurIPS, ICLR, and other AI conferences.</p>
+              <p>Teaching assistant, Discrete Mathematics <span>Feb 2025 - Jun 2025 · Graded assignments and quizzes; supported student Q&amp;A.</span></p>
+              <p>Teaching assistant, Mathematical Analysis <span>Sep 2020 - Jan 2021 · Graded assignments and exams; supported student Q&amp;A.</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="honors-strip">
+          <p class="subheading">Selected honors</p>
+          <p>Outstanding Student, ShanghaiTech University (2023-2024) · Undergraduate Scholarship, top 2% of the 2019 cohort (2019-2020) · Merit Student (2019-2020)</p>
+        </div>
+      </section>
+
+      <section class="shell contact" id="contact">
+        <div>
+          <p class="section-label">04 / Contact</p>
+          <h2>For research, collaboration, or questions.</h2>
+        </div>
+        <a class="contact-email" href="mailto:peiyangu@outlook.com">peiyangu@outlook.com</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <span>© <span data-year>2026</span> Peiyan Gu</span>
+        <a href="https://algpy.me/nordic-dubai-field-guide/">Travel notes</a>
+      </div>
+    </footer>
+    <script src="./script.js" defer></script>
   </body>
 </html>
