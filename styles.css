@@ -48,7 +48,7 @@ h1 { margin-bottom: .85rem; font-size: clamp(2.8rem, 6vw, 4.2rem); font-weight: 
 .portrait-frame img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(.85) saturate(.4) contrast(1.04); }
 .portrait figcaption { padding-top: .5rem; color: var(--subtle); font-size: .66rem; }
 
-.facts { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line); }
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
 .facts > div { display: flex; flex-direction: column; gap: .25rem; padding: .9rem 1.25rem .95rem 0; }
 .facts > div + div { padding-left: 1.25rem; border-left: 1px solid var(--line); }
 .facts span { color: var(--subtle); font-size: .6rem; }
@@ -68,6 +68,18 @@ h2 { margin-bottom: .65rem; font-size: clamp(1.8rem, 3.7vw, 2.5rem); font-weight
 .research-areas li::before { content: ""; display: inline-block; width: .3rem; height: .3rem; margin: 0 .55rem .12rem 0; background: var(--accent); }
 .technical-heading { margin-top: 1.5rem; }
 .technical-copy { margin-bottom: 0; color: var(--muted); font-size: .82rem; }
+
+.research-trajectory { margin-top: 3rem; padding-top: 1.35rem; border-top: 1px solid var(--line); }
+.trajectory-heading { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 2rem; align-items: baseline; }
+.trajectory-heading .subheading { margin: 0; }
+.trajectory-note { max-width: 620px; margin: 0; color: var(--muted); font-size: .86rem; }
+.trajectory-list { margin: 1.25rem 0 0; padding: 0; list-style: none; }
+.trajectory-list li { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 2rem; padding: 1.1rem 0 1.2rem; border-top: 1px solid var(--line); }
+.trajectory-list li:last-child { border-bottom: 1px solid var(--line); }
+.trajectory-meta { display: flex; flex-direction: column; gap: .25rem; color: var(--subtle); font-size: .68rem; line-height: 1.45; }
+.trajectory-meta span:last-child { color: var(--accent); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.trajectory-list h3 { margin-bottom: .35rem; font-size: 1rem; line-height: 1.3; }
+.trajectory-list p { max-width: 720px; margin: 0; color: var(--muted); font-size: .83rem; }
 
 .section-muted { background: var(--soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .publication-list { margin: 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
@@ -95,6 +107,9 @@ h2 { margin-bottom: .65rem; font-size: clamp(1.8rem, 3.7vw, 2.5rem); font-weight
 .honors-strip { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 2rem; margin-top: 1.7rem; padding-top: 1.15rem; border-top: 1px solid var(--line); }
 .honors-strip .subheading, .honors-strip p:last-child { margin: 0; }
 .honors-strip p:last-child { color: var(--muted); font-size: .82rem; }
+.coursework-strip { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 2rem; margin-top: 1.7rem; padding-top: 1.15rem; border-top: 1px solid var(--line); }
+.coursework-strip .subheading, .coursework-strip p:last-child { margin: 0; }
+.coursework-strip p:last-child { color: var(--muted); font-size: .82rem; }
 
 .contact { display: flex; align-items: end; justify-content: space-between; gap: 2rem; padding-top: 1.7rem; padding-bottom: 3.8rem; border-top: 1px solid var(--line); }
 .contact h2 { max-width: 640px; margin: .45rem 0 0; font-size: clamp(1.45rem, 3vw, 2rem); }
@@ -119,9 +134,12 @@ h2 { margin-bottom: .65rem; font-size: clamp(1.8rem, 3.7vw, 2.5rem); font-weight
   .section-label { margin-top: 0; }
   .research-grid, .education-grid { grid-template-columns: 1fr; gap: 2rem; }
   .research-areas ul { grid-template-columns: 1fr; }
+  .trajectory-heading, .trajectory-list li { grid-template-columns: 1fr; gap: .5rem; }
+  .trajectory-list li { padding-top: 1rem; padding-bottom: 1.1rem; }
   .publication { grid-template-columns: 1fr; gap: .35rem; padding: 1.35rem 0 1.55rem; }
   .publication-year { margin: 0; }
   .publication-details > div { grid-template-columns: 1fr; gap: .15rem; }
+  .coursework-strip { grid-template-columns: 1fr; gap: .45rem; }
   .honors-strip { grid-template-columns: 1fr; gap: .45rem; }
   .contact { align-items: flex-start; flex-direction: column; gap: 1.1rem; padding-top: 1.45rem; padding-bottom: 3rem; }
   .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; padding-top: .85rem; padding-bottom: .85rem; }
