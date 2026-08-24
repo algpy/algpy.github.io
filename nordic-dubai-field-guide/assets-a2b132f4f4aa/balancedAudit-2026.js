@@ -932,16 +932,16 @@ const overrides = {
     stay: "Flåm车站—码头步行圈 · 连住第2晚",
     title: "09:30接驳串起Otternes、Aurland与14:15 Stegastein",
     summary:
-      "按2026年9月官方接驳表：09:30从Flåm出发、09:35到Otternes停靠点；12:35再上车、12:44到Aurland；14:15从Aurland Stop F去Stegastein，15:35回Flåm。每段都留出陡坡步行、午餐和签到余量。",
+      "按2026年9月官方接驳表：09:30从Flåm出发、09:35到Otternes停靠点；12:35再上车、12:44到Aurland；14:15从Aurland Stop F去Stegastein，15:35回Flåm。Otternes建筑内部只有实际买到导览票才进入；无票仍可按现场标识走获准的农庄外部与峡湾视角。",
     route:
       "Flåm 09:30 → Otternes 09:35 → Aurland 12:44 → Stegastein 14:30 → Flåm 15:35",
     main: [
-      { time: "07:45–08:30", title: "天气、订单与步行条件复核", detail: "确认09:30接驳、Otternes 10:00导览（若订）、14:15 Stegastein和回程；低云时只删观景台。" },
+      { time: "07:45–08:30", title: "天气、订单与步行条件复核", detail: "确认09:30接驳、12:35续程、14:15 Stegastein和回程；Otternes导览只在实际订单存在时加入，低云时删除观景台。" },
       { time: "09:15–09:30", title: "到Flåm接驳站签到", detail: "只带日包；大件留住宿。" },
       { time: "09:30–09:35", title: "Flåm → Otternes停靠点", detail: "按9月官方表；下车后仍有约500米较陡步行。" },
       { time: "09:35–09:55", title: "步行上坡到Otternes", detail: "防滑慢走；09:55前到导览集合点。" },
-      { time: "10:00–11:00", title: "Otternes历史农庄", detail: "有票才进入导览建筑；未订票只走允许的公共通道和观景区域。" },
-      { time: "11:00–12:10", title: "农庄外部、峡湾视角与短休", detail: "不闯封闭空间；12:10开始下坡。" },
+      { time: "09:55–11:50", title: "Otternes农庄外部与峡湾视角", detail: "按现场标识走获准区域；只有实际买到导览票才在票面时段进入对应建筑，不把10:00导览当成无条件存在。" },
+      { time: "11:50–12:10", title: "收口、补水并准备下坡", detail: "不闯封闭空间；11:50停止延伸，12:10开始下坡。" },
       { time: "12:10–12:35", title: "下坡回停靠点候车", detail: "12:30班从Flåm出发，约12:35到Otternes；不要卡点。" },
       { time: "12:35–12:44", title: "Otternes → Aurland", detail: "按9月官方接驳表。" },
       { time: "12:45–13:55", title: "Aurland午餐与公共滨水短走", detail: "只选顺路热食；13:55前去Stop F。" },
@@ -957,7 +957,7 @@ const overrides = {
         time: "09:30–09:35；12:35–12:44",
         duration: "两段合计约14分",
         buffer: "Otternes上下各为500米较陡步行留20–25分",
-        ticket: "官方接驳实际票",
+        ticket: "官方接驳实际票；Otternes建筑导览另购",
         official: links.flamAurland,
         map: mapRoute("Flåm Station", "Aurland Church"),
       },
@@ -975,11 +975,11 @@ const overrides = {
     transport: [
       "9月官方接驳把Flåm 09:30、Otternes 09:35、Aurland 12:44和14:15 Stegastein连成一条线",
       "Otternes停靠点到农庄约500米且较陡，时间轴已为上下坡各留20–25分钟",
-      "Stegastein低云时直接删除；不自驾、不临时包车",
+      "Otternes建筑导览只在实际有票时执行；Stegastein低云时直接删除，不自驾、不临时包车",
     ],
     timeCheck: {
-      status: "官方9月时刻已对齐",
-      note: "09:30 Flåm、09:35 Otternes、12:35上车、12:44 Aurland、14:15 Stop F、15:35 Flåm。",
+      status: "官方9月交通时刻已对齐；Otternes入内为条件项",
+      note: "09:30 Flåm、09:35 Otternes、12:35上车、12:44 Aurland、14:15 Stop F、15:35 Flåm；建筑导览必须以实际可售票为准。",
     },
     execution: {
       grade: "A｜两种官方巴士串成闭环",
@@ -987,11 +987,11 @@ const overrides = {
       basis: "下坡、午餐、签到均有明确缓冲，Stegastein仍可独立删除。",
       anchors: [
         { time: "09:30–09:35", title: "Flåm→Otternes", detail: "之后陡坡步行。" },
-        { time: "10:00–11:00", title: "Otternes", detail: "导览需票。" },
+        { time: "09:55–11:50", title: "Otternes", detail: "外部按现场标识；入内导览需实际票。" },
         { time: "12:35–12:44", title: "Otternes→Aurland", detail: "12:10开始下坡。" },
         { time: "14:15–15:35", title: "Stegastein", detail: "低云即删。" },
       ],
-      prep: ["下载两段巴士与Otternes订单", "穿防滑鞋", "准备水和路餐"],
+      prep: ["下载两段巴士与Stegastein订单", "如需入内另存Otternes导览票", "穿防滑鞋并准备水和路餐"],
       buffers: [
         { math: "Otternes下坡→12:35上车", result: "25分钟" },
         { math: "12:44到Aurland→14:15发车", result: "91分钟" },
@@ -1000,7 +1000,7 @@ const overrides = {
       dropOrder: ["Flåm Railway Museum", "Aurland额外商店", "Stegastein；不压缩巴士签到"],
       recheck: [
         { label: "Flåm—Aurland接驳", note: "09:30与12:35两段", url: links.flamAurland },
-        { label: "Otternes", note: "10:00导览与集合点", url: links.otternes },
+        { label: "Otternes", note: "实际导览库存、集合点与允许区域", url: links.otternes },
         { label: "Stegastein", note: "14:15与能见度", url: links.stegastein },
       ],
       recovery: "错过12:35接驳就删除Aurland/Stegastein并回Flåm；不靠临时出租车追票。",
@@ -1012,7 +1012,7 @@ const overrides = {
     phase: "Flåm Railway + Bergen Line东行",
     title: "08:20山地铁路接10:02 Bergen Line，15:49到OSL",
     summary:
-      "08:20–09:17从Flåm到Myrdal，保留45分钟换乘；10:02–15:05乘F4直达Oslo S，再乘15:30–15:49机场快线到OSL。整天只有受保护铁路与机场前置，不折返Bergen。",
+      "08:20–09:17从Flåm到Myrdal，保留45分钟换乘；10:02–15:05乘F4直达Oslo S，再乘15:30–15:49机场快线到OSL。前两段应购买为同一Vy联程；Oslo S—OSL是独立高频机场段，错过15:30就乘下一班。",
     verified:
       "Norway’s Best 2026夏秋表与Entur 2026-09-16 Myrdal→Oslo、Oslo S→OSL查询已核对；执行前48小时仍以Vy/站屏为准",
     stay: "OSL机场航站楼步行酒店 · 1晚（待订）",
@@ -1023,7 +1023,7 @@ const overrides = {
       { time: "06:45–07:30", title: "早餐、退房与路餐", detail: "完成酒店结算；水、热饮和午餐上车前备好。" },
       { time: "07:30–08:05", title: "步行到Flåm Station并看站屏", detail: "08:05前到站；只带实际联程订单。" },
       { time: "08:20–09:17", title: "Flåm Railway：Flåm → Myrdal", detail: "按2026年5月1日至9月30日表；最终以票面和站屏为准。" },
-      { time: "09:17–10:02", title: "Myrdal受保护换乘", detail: "45分钟足以在同站换乘；不离站、不拖箱拍远景。" },
+      { time: "09:17–10:02", title: "Myrdal同票联程换乘", detail: "Flåm—Oslo须购买在同一Vy订单；45分钟同站换乘，不离站、不拖箱拍远景。" },
       { time: "10:02–15:05", title: "F4 Myrdal → Oslo S", detail: "沿Hardangervidda东行；不在Finse等站自行下车。" },
       { time: "15:05–15:30", title: "Oslo S转机场列车", detail: "25分钟换乘；看清Flytoget与Vy站台，不跑动。错过15:30就乘下一班。" },
       { time: "15:30–15:49", title: "Oslo S → Oslo lufthavn（FLY2）", detail: "Entur当前目标日为19分钟；实际票务与站屏优先。" },
@@ -1080,7 +1080,7 @@ const overrides = {
     execution: {
       grade: "A｜两次换乘分别45分钟与25分钟",
       tone: "good",
-      basis: "长铁路日以同一联程和机场酒店吸收波动，不增加城市支线。",
+      basis: "Flåm—Oslo用同一Vy联程吸收前两段波动；Oslo S—OSL为独立高频机场段，机场酒店继续吸收晚点。",
       anchors: [
         { time: "08:20–09:17", title: "Flåm Railway", detail: "08:05前到站。" },
         { time: "10:02–15:05", title: "F4到Oslo S", detail: "Myrdal换乘45分钟。" },
@@ -1129,6 +1129,7 @@ const confirmedFlightCorrections = {
   sep12: {
     city: "马尔默 → 哥本哈根机场 → 卑尔根",
     country: "瑞典 → 丹麦 → 挪威",
+    phase: "ECCV最终日与17:50飞往Bergen",
     stay: "Bergen Station / Nonneseter步行圈 · 1晚（待订）",
     title: "ECCV后赶17:50直飞：下午13:30是离会硬截止",
     summary:
@@ -1136,6 +1137,19 @@ const confirmedFlightCorrections = {
     route:
       "Sky Hotel退房寄存 → Hyllie会场 → 13:30离会 → Sky Hotel取行李 → Triangeln → CPH → 17:50 BGO → Bergen Station住宿",
     load: "高 · 会议最终日 + 跨境列车 + 17:50直飞",
+    bookingUrl: links.cphFlights,
+    food: [
+      "午餐使用ECCV会场餐或随身路餐；过安检后只有时间充足才买顺路热食",
+      "不为餐厅拖延13:30离会、托运、安检、登机口或Bergen入住",
+    ],
+    social: [
+      "13:20前只完成已约定的研究交流；13:30硬离会后不再增加会面",
+      "跨境列车、航班和BGO轻轨各自保管票证与行李，不临时拼车",
+    ],
+    safety: [
+      "护照、电脑、药物和订单随身；托运行李不放电子设备、证件或充电宝",
+      "跨境列车异常立即按运营方改线；抵达Bergen后只入住，不夜游",
+    ],
     verified:
       "17:50起飞由你的实际航班确认；Sky Hotel地址、跨境列车与BGO轻轨为官方交通锚点。到达时间、航司截载与登机口只认票面。",
     main: [
@@ -1187,10 +1201,10 @@ const confirmedFlightCorrections = {
           "距17:50起飞约2小时35分钟。托运截止和登机时间以航司订单为准；17:20前到登机口。",
       },
       {
-        time: "17:50–约19:10",
+        time: "17:50–票面到达",
         title: "CPH → BGO直飞",
         detail:
-          "17:50为你已确认的起飞时间；约19:10只按常见1小时20分钟航程倒算，必须用票面到达时间替换。",
+          "17:50为你已确认的起飞时间；到达时刻、托运截止和登机口只认实际航班订单，不再用估算值伪装成票面时间。",
       },
       {
         time: "落地+0:00–0:45",
@@ -1234,7 +1248,7 @@ const confirmedFlightCorrections = {
         mode: "已确认直飞",
         route: "CPH → BGO",
         time: "17:50起飞",
-        duration: "约1小时20–25分钟；到达只认票面",
+        duration: "以实际航班订单为准",
         buffer: "15:15前进航站楼，17:20前到登机口",
         ticket: "已确认的实际航班订单",
         official: links.cphFlights,
@@ -1251,11 +1265,62 @@ const confirmedFlightCorrections = {
         map: mapRoute("Bergen Airport", "Bergen Station"),
       },
     ],
+    sights: [
+      {
+        name: "ECCV Final Day",
+        why: "只完成本人必须到场的报告、作者与研究交流义务；普通观光不能挤压13:30离会硬截止。",
+        ticket: "ECCV注册与本人最终program。",
+        tour: "13:20开始收口，13:30离开会场。",
+        url: "https://eccv.ecva.net/Conferences/2026/Dates",
+        map: mapSearch("Malmömässan"),
+      },
+    ],
+    foods: [
+      {
+        name: "ECCV会场午餐 / 随身路餐",
+        type: "航班日时间保险",
+        order: "能在13:20前结束的热食、三明治与水",
+        note: "会场餐排队长就用随身路餐；13:20开始收口，13:30必须离会。",
+        price: "按ECCV权益或现场价格",
+        tier: "€",
+        near: "Malmömässan",
+        meal: "午餐",
+        booking: "不另订餐厅",
+        url: "https://eccv.ecva.net/Conferences/2026/Registration",
+        map: mapSearch("Malmömässan"),
+      },
+      {
+        name: "CPH安检后顺路补给",
+        type: "条件式机场热食",
+        order: "能随时结束的热食或外带",
+        note: "完成托运和安检后再决定；17:20前必须到登机口，不为指定门店跨区。",
+        price: "按机场现场价格",
+        tier: "€€",
+        near: "CPH实际登机口动线",
+        meal: "飞行前补给",
+        booking: "现场购买",
+        url: "https://www.cph.dk/en/practical/food-shopping",
+        map: mapSearch("Copenhagen Airport Terminal 3"),
+      },
+    ],
+    sources: [
+      { label: "ECCV日期", url: "https://eccv.ecva.net/Conferences/2026/Dates", type: "官网" },
+      { label: "Sky Hotel Malmö City", url: links.skyHotel, type: "住宿官网" },
+      { label: "Øresundståg", url: links.oresund, type: "运营方" },
+      { label: "CPH航班", url: links.cphFlights, type: "机场官网" },
+      { label: "BGO机场交通", url: links.bergenAirport, type: "公共交通" },
+    ],
+    visual: { slot: 6, label: "ECCV会场 → Sky Hotel取行李 → CPH 17:50 → Bergen" },
     transport: [
       "17:50 CPH→BGO起飞时间已由你确认；到达时间和航司截载只认票面",
       "13:30是Hyllie离会硬截止；13:30后的强制会议义务与该航班不可同时满足",
       "Sky Hotel在Kaptensgatan 1，必须回市中心取行李，不能按Hyllie酒店计算",
     ],
+    timeCheck: {
+      status: "17:50起飞已确认；地面链路可执行",
+      note:
+        "固定硬锚点为13:30离开Hyllie会场、15:15前进入CPH Terminal 3和17:50起飞。BGO到达时刻、托运截止与登机口以实际订单为准；落地后按相对时间轻轨进城。",
+    },
     rain: {
       trigger: "会议拖延、跨境列车异常或航班延误",
       title: "13:30仍硬离会，只保留取行李—CPH—BGO",
@@ -1324,6 +1389,7 @@ const confirmedFlightCorrections = {
   sep13: {
     city: "卑尔根 → 沃斯",
     country: "挪威",
+    phase: "Bergen完整日与晚间Voss转场",
     stay: "Voss Station / Bus Terminal步行圈 · 1晚",
     title: "一整天看懂卑尔根，再乘18:29列车去沃斯",
     summary:
@@ -1331,6 +1397,14 @@ const confirmedFlightCorrections = {
     route:
       "Bergen住宿 → Bryggen → Bryggens Museum → Ulriken（条件式）→ Bergen Station取行李/早晚餐 → 18:29 Voss",
     load: "中高 · 世界遗产城市层 + 条件式高视角 + 18:29铁路",
+    food: [
+      "11:20–12:00在Bryggens Museum—Ulriken顺路轴快速午餐；排队长就用路餐",
+      "16:15–17:15在Bergen Station步行圈完成早晚餐；Voss抵达后只补水和次日早餐",
+    ],
+    social: [
+      "Bryggens Museum公共导览和Ulriken缆车是自然交流场景，但不为聊天错过12:30判断",
+      "17:15后停止社交和加点，18:10前带行李进入站台区",
+    ],
     verified:
       "Bryggens Museum开放、Ulriken运营/接驳与Entur目标日Bergen→Voss时刻已核对；执行前仍按官方公告与实际订单复核。",
     main: [
@@ -1370,11 +1444,64 @@ const confirmedFlightCorrections = {
         map: mapRoute("Bergen Station", "Voss Station"),
       },
     ],
+    foods: [
+      {
+        name: "Bergen顺路快速午餐",
+        type: "鱼汤 / 鱼饼 / 路餐",
+        order: "能在11:20–12:00完成的一份热食",
+        note: "只选Bryggens Museum到Ulriken接驳轴线；12:00离开，不排长队。",
+        price: "约100–250 NOK",
+        tier: "€–€€",
+        near: "Bergen市中心",
+        meal: "午餐",
+        booking: "当天决定",
+        url: "https://en.visitbergen.com/food-and-drink",
+        map: mapSearch("Bergen city centre food"),
+      },
+      {
+        name: "Bergen Station步行圈早晚餐",
+        type: "列车前热食",
+        order: "能在一小时内完成的主食与水",
+        note: "16:15–17:15执行；17:15无条件结束，排队长就改路餐。",
+        price: "约150–350 NOK",
+        tier: "€€",
+        near: "Bergen Station",
+        meal: "早晚餐",
+        booking: "不锁不可取消订位",
+        url: "https://en.visitbergen.com/food-and-drink",
+        map: mapSearch("Bergen Station restaurants"),
+      },
+      {
+        name: "Voss站区次日补给",
+        type: "到站后简餐",
+        order: "水、面包、水果和9月14日早餐",
+        note: "19:49抵达后不再安排正式晚餐；住宿太晚就使用预先准备的路餐。",
+        price: "约80–180 NOK",
+        tier: "€",
+        near: "Voss Station步行圈",
+        meal: "晚间补给",
+        booking: "现场购买",
+        url: "https://www.visitvoss.no/en/restaurants-cafes-bars-voss",
+        map: mapSearch("Voss Station"),
+      },
+    ],
+    sources: [
+      { label: "Bryggens Museum", url: links.bryggensMuseum, type: "博物馆官网" },
+      { label: "Ulriken", url: links.ulriken, type: "运营方" },
+      { label: "Entur", url: links.entur, type: "国家行程规划" },
+      { label: "Vy", url: links.vy, type: "铁路" },
+    ],
+    visual: { slot: 6, label: "Bryggen考古层 · Ulriken高视角 · 18:29 Voss列车" },
     transport: [
       "昨晚已住Bergen，今天没有航班落地风险；主线是一馆、一片世界遗产街区和一处高视角",
       "Ulriken低云或运营异常就删，不用Fløyen填满时间",
       "Bergen→Voss目标班18:29–19:49，后续有20:39与21:36恢复参考",
     ],
+    timeCheck: {
+      status: "Bergen整日链路与18:29铁路已对齐",
+      note:
+        "昨晚已抵达Bergen，本日没有航空段。12:30无法开始Ulriken就删除高处支线；17:15结束用餐、18:10前到站台，目标18:29–19:49前往Voss。",
+    },
     rain: {
       trigger: "低云、强风、大雨或Ulriken停运",
       title: "删除Ulriken，保留Bryggen + Bryggens Museum + 18:29列车",
@@ -1452,8 +1579,16 @@ const commonReplacements = {
     ["Nordhavn%20Station", "Bob%20W%20Copenhagen%20Osterbro"],
     ["把酒店真实前台坐标替换Nordhavn示例锚点", "确认Bob W门禁码与Teglværksgade 31导航"],
     ["住宿尚未提供，Bob W Copenhagen Østerbro 仅作安全住宿区锚点", "住宿已确认为Bob W Copenhagen Østerbro，地图使用Teglværksgade 31真实地址"],
+    ["住宿优先 Østerbro/Nordhavn，24小时前台、距轨道站步行 5–8 分钟", "已确认Bob W Østerbro；提前保存数字门禁码、客服入口和从车站步行路线"],
+    ["住 Østerbro/Nordhavn 时顺路", "住 Bob W Østerbro 时仅在顺路且营业时"],
+    ["机场到Nordhavn约25–40分钟", "机场到Bob W约25–40分钟"],
+    ["只住有24小时前台、离站不超过8分钟的地方；先放行李。", "按Bob W数字门禁入住并先放行李；门禁码和客服入口提前离线保存。"],
+    ["航班、酒店和入境耗时尚未提供", "航班抵达与入境耗时尚未提供；Bob W住宿已确认"],
   ],
-  sep04: [["Nordhavn/Østerbro", "Bob W Copenhagen Østerbro"]],
+  sep04: [
+    ["Nordhavn/Østerbro", "Bob W Copenhagen Østerbro"],
+    ["回Nordhavn选鱼汤或开放三明治", "回Bob W住宿交通线上选鱼汤或开放三明治"],
+  ],
   sep05: [["Nordhavn/Østerbro", "Bob W Copenhagen Østerbro"]],
   sep06: [["Nordhavn/Østerbro", "Bob W Copenhagen Østerbro"]],
   sep07: [
@@ -1470,11 +1605,13 @@ const commonReplacements = {
     ["18:30前到Hyllie", "18:30前到Sky Hotel"],
     ["直接去Hyllie", "直接去Malmö C并入住Sky Hotel"],
     ["去Hyllie提前入住", "去Malmö C并提前入住Sky Hotel"],
+    ["不再为了错误的Sky Hotel Malmö City多坐两站", "到Malmö C即下车，不要继续坐到Hyllie"],
   ],
   sep08: [
     ["Hyllie住宿", "Sky Hotel Malmö City"],
     ["Hyllie酒店", "Sky Hotel Malmö City"],
     ["5–12分", "25–35分"],
+    ["住Hyllie后步行约25–35分钟，按个人首场前30分钟到即可", "从Sky Hotel乘车到会场门到门约25–35分钟，按个人首场前50分钟离店"],
     ["住Hyllie会场步行区，按个人首场前30分钟出门", "住Malmö市中心，按个人首场前50分钟离店"],
     ["全日步行；即使下暴雨也只暴露25–35分钟，带防水电脑内胆。", "步行＋区域列车往返；雨天带防水电脑内胆，并按门到门25–35分钟另留15–20分钟余量。"],
   ],
@@ -1490,6 +1627,11 @@ const commonReplacements = {
   sep11: [
     ["Hyllie住宿", "Sky Hotel Malmö City"],
     ["5–15分", "25–35分"],
+    ["21:15前回Hyllie", "21:15前回Sky Hotel"],
+  ],
+  sep15: [
+    ["Otternes历史农庄（公共/已订导览）", "Otternes历史农庄（外部主线 / 导览条件式）"],
+    ["Otternes已订导览和官方巴士是低压力交流场景", "只有实际买到Otternes导览票时才加入导览；官方巴士是低压力交流场景"],
   ],
 };
 
@@ -1578,7 +1720,7 @@ export function applyBalancedAuditDay(baseDay, legacyOverride) {
       ...audited,
       transit: audited.transit.map((item) =>
         item.route === "Bergen Station → Voss Station"
-          ? { ...item, buffer: "17:45前结束用餐；18:10前到站台；前48小时复核" }
+          ? { ...item, buffer: "17:15前结束用餐；18:10前到站台；前48小时复核" }
           : item,
       ),
       execution: {
@@ -1586,7 +1728,7 @@ export function applyBalancedAuditDay(baseDay, legacyOverride) {
         anchors: audited.execution.anchors.map((item) =>
           item.title === "Bergen→Voss" ? { ...item, detail: "18:10前到站台。" } : item,
         ),
-        hardCutoff: "14:00仍未开始Ulriken或天气不成立就删除；17:45结束用餐，18:10前到站台。",
+        hardCutoff: "12:30仍未开始Ulriken或天气不成立就删除；17:15结束用餐，18:10前到站台。",
       },
       backup: {
         ...audited.backup,
@@ -1598,7 +1740,7 @@ export function applyBalancedAuditDay(baseDay, legacyOverride) {
       routeData: audited.routeData
         ? {
             ...audited.routeData,
-            hardStop: "14:00未开始Ulriken就删；17:45结束用餐，18:10前到站台",
+            hardStop: "12:30未开始Ulriken就删；17:15结束用餐，18:10前到站台",
             stops: audited.routeData.stops.map((item) =>
               item.title === "Bergen Station"
                 ? { ...item, time: "18:10前", task: "取行李、核对站台并留在站内。" }
@@ -1706,6 +1848,26 @@ export function applyBalancedSources(sources) {
 
 const finalizeCoreDay = (day) => {
   let audited = replaceDeep(day, commonReplacements[day.id] || []);
+  if (["sep12", "sep13", "sep14", "sep15"].includes(day.id)) {
+    audited = { ...audited, freeTime: [] };
+  }
+  if (day.id === "sep03") {
+    audited = {
+      ...audited,
+      freeTime: [
+        {
+          window: "20:00前已回Bob W且体力正常",
+          title: "在住宿内整理Møns订单与路餐",
+          detail: "不再出门；把9月4日官方小巴的实际集合点、二维码、防雨层、水和路餐一次整理好。",
+          how: "在Bob W房内完成，不新增交通。",
+          cutoff: "21:30前休息；第二天只按官方小巴票面时间出发。",
+        },
+      ],
+    };
+  }
+  if (day.id === "sep12") {
+    audited = { ...audited, bookingUrl: links.cphFlights };
+  }
   if (["sep03", "sep04", "sep05", "sep06"].includes(day.id)) {
     audited = replaceDeep(audited, [
       ["Nordhavn Station Copenhagen", "Bob W Copenhagen Østerbro"],
@@ -1987,10 +2149,8 @@ export function applyBalancedPlanAudit(plans) {
       ...cleaned,
       days: cleaned.days.map(finalizeCoreDay),
       groups: [
-        ["哥本哈根与西兰", "D1–4"],
-        ["Helsingør→Malmö", "D5"],
-        ["Malmö · ECCV", "D6–9"],
-        ["ECCV→Bergen", "D10"],
+        ["哥本哈根与西兰", "D1–5"],
+        ["Malmö · ECCV", "D6–10"],
         ["Bergen / Nærøyfjord / Aurlandsfjord", "D11–13"],
         ["Bergen Line→OSL", "D14"],
         ["OSL开口程返沪", "D15"],
