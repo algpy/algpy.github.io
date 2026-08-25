@@ -1,0 +1,51 @@
+.route-stop-rail button,
+.inspector-details dd {
+  overflow-wrap: anywhere;
+}
+
+.inspector-details > div {
+  min-width: 0;
+}
+
+@media (width <= 1100px) {
+  .route-workspace-grid {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    border-right: 0;
+    border-left: 0;
+  }
+
+  .route-map-panel {
+    order: 1;
+  }
+
+  .route-stop-rail {
+    order: 2;
+    max-height: none;
+    overflow: visible;
+    border-top: 1px solid var(--line-dark);
+    border-right: 0;
+    scrollbar-width: auto;
+  }
+
+  .route-stop-rail button {
+    min-width: 0;
+  }
+
+  .route-map-canvas {
+    height: 360px;
+  }
+}
+
+@media (width <= 820px) {
+  .route-map-canvas {
+    height: 320px;
+  }
+}
+
+@media (width <= 520px) {
+  .route-map-canvas {
+    height: 270px;
+  }
+}

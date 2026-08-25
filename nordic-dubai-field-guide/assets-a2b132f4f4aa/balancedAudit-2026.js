@@ -873,13 +873,13 @@ const overrides = {
     stay: "Flåm车站—码头步行圈 · 连住第1晚",
     title: "09:50巴士接12:10峡湾船：完整穿过Nærøyfjord",
     summary:
-      "09:50–10:55从Voss Stop A乘官方巴士到Gudvangen Stop H，保留75分钟码头缓冲；12:10–14:10乘正规观光船完整穿过UNESCO Nærøyfjord到Flåm。时间已按运营方2026年9月表对齐。",
+      "09:50–约10:50/10:55从Voss Stop A乘官方巴士到Gudvangen Stop H，保留75分钟码头缓冲；12:10–14:10乘正规观光船完整穿过UNESCO Nærøyfjord到Flåm。时间已按运营方2026年9月表对齐。",
     route:
       "Voss Stop A 09:50 → Gudvangen Stop H 10:55 → 12:10 Nærøyfjord船 → Flåm 14:10 → 住宿",
     main: [
       { time: "07:30–08:30", title: "早餐、退房与路餐", detail: "确认巴士、12:10船票、Flåm两晚住宿和码头信息。" },
       { time: "09:20–09:35", title: "到Voss Bus Terminal Stop A", detail: "火车站旁但不要等在铁路站台；核对VY456 / Norway’s Best车辆。" },
-      { time: "09:50–10:55", title: "Voss → Gudvangen官方巴士", detail: "当前2026季节表每日运行；以票面、车辆和临时公告为准。" },
+      { time: "09:50–约10:50/10:55", title: "Voss → Gudvangen官方巴士", detail: "当前2026季节表每日运行；以票面、车辆和临时公告为准。" },
       { time: "10:55–11:20", title: "确认Stop H、码头与报到位置", detail: "先找到票面码头、洗手间和行李规则，再吃饭。" },
       { time: "11:20–11:50", title: "Gudvangen快速热食", detail: "只点能在30分钟内完成的一份热食；排队长就用路餐。" },
       { time: "11:50–12:10", title: "登船准备", detail: "回到码头、核对二维码和行李；不去Viking Valley。" },
@@ -892,7 +892,7 @@ const overrides = {
       {
         mode: "官方巴士 VY456",
         route: "Voss Stop A → Gudvangen Stop H",
-        time: "09:50–10:55",
+        time: "09:50–约10:50/10:55",
         duration: "1时05分",
         buffer: "距12:10开船75分钟",
         ticket: "Norway’s Best实际订单",
@@ -911,7 +911,7 @@ const overrides = {
       },
     ],
     transport: [
-      "当前官方组合是09:50–10:55巴士 + 12:10–14:10峡湾船，不再写‘按实际船票’却不给可执行主线",
+      "当前官方组合是09:50–约10:50/10:55巴士 + 12:10–14:10峡湾船，不再写‘按实际船票’却不给可执行主线",
       "巴士到船有75分钟，先认码头再吃饭；不把Viking Valley塞进缓冲",
       "船停航只通过运营方改签，不找小船或出租艇替代",
     ],
@@ -925,7 +925,7 @@ const overrides = {
       basis: "官方巴士和峡湾船在同一运营体系中形成稳定衔接。",
       anchors: [
         { time: "09:20", title: "到Stop A", detail: "核对车辆。" },
-        { time: "09:50–10:55", title: "巴士", detail: "Voss→Gudvangen。" },
+        { time: "09:50–约10:50/10:55", title: "巴士", detail: "Voss→Gudvangen。" },
         { time: "11:50", title: "回码头", detail: "停止午餐。" },
         { time: "12:10–14:10", title: "峡湾船", detail: "Gudvangen→Flåm。" },
       ],
@@ -1854,7 +1854,7 @@ export function applyBalancedBookings(bookings) {
       return {
         ...item,
         title: "9.14 Voss巴士＋12:10 Nærøyfjord船",
-        note: "目标组合为09:50–10:55官方巴士、12:10–14:10 Gudvangen→Flåm船；同日一起核对后再购。",
+        note: "目标组合为09:50–约10:50/10:55官方巴士、12:10–14:10 Gudvangen→Flåm船；同日一起核对后再购。",
       };
     }
     if (item.id === "rail") {

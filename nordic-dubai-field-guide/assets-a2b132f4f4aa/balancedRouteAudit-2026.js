@@ -152,7 +152,7 @@ const baseBalancedRouteAudit = {
       }),
       stop("10:55", "Gudvangen Stop H", 60.8814484, 6.8414416, {
         arriveBy: "bus",
-        leg: "09:50–10:55",
+        leg: "09:50–约10:50/10:55",
         task: "先认码头。",
       }),
       stop("11:50", "Gudvangen Ferry Terminal", 60.8814484, 6.8414416, {
