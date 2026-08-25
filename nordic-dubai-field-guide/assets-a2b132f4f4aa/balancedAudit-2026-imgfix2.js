@@ -58,7 +58,7 @@ const overrides = {
     city: "哥本哈根 → 赫尔辛格 → 马尔默",
     stay: "Sky Hotel Malmö City · Kaptensgatan 1 · 已确认第1晚",
     summary:
-      "从Bob W Østerbro退房后，把行李带到Helsingør Station正规行李柜；完成Kronborg与Øresund Aquarium后，乘官方轮渡到Helsingborg，再乘直达列车到Malmö C并步行入住Sky Hotel Malmö City。路线不再误绕Hyllie。",
+      "从Bob W Østerbro退房后，只有在出发前拿到Helsingør具体寄存点的已付款订单或书面确认，才执行Kronborg与Øresund Aquarium；否则带行李直接跨海去Malmö。游览成立时，取件后乘官方轮渡到Helsingborg，再乘直达列车到Malmö C并步行入住Sky Hotel Malmö City。",
     route:
       "Bob W Østerbro → Helsingør寄存 → Kronborg / Øresund Aquarium → Helsingborg C → Malmö C → Sky Hotel Malmö City",
     main: [
@@ -72,13 +72,13 @@ const overrides = {
         time: "07:45–08:40窗口",
         title: "København H → Helsingør",
         detail:
-          "乘当天实际区域列车；到站先确认行李柜，不拖箱进入老城和城堡。",
+          "乘当天实际区域列车；只前往已预订/书面确认的寄存地址，不在到站后临时赌车站有柜。",
       },
       {
         time: "08:40–09:05",
-        title: "Helsingør Station寄存大件",
+        title: "已确认的Helsingør寄存点放件",
         detail:
-          "DSB确认车站设有行李柜，但不保证尺寸和空位。柜满时不拖箱游览：直接跨海去Malmö入住，Kronborg与水族馆改为删除。",
+          "出发前必须确认具体门店地址、营业时间、容量与取件截止。DSB只说明部分车站有柜，并未给出Helsingør站点级确认；无有效订单/书面确认就不寄存、不拖箱游览，直接跨海去Malmö。",
       },
       {
         time: "09:05–09:40",
@@ -94,7 +94,7 @@ const overrides = {
         time: "10:00–12:25",
         title: "Kronborg：炮廓、礼拜堂、舞厅与海峡视线",
         detail:
-          "优先10:15免费短介绍；12:25无条件收口。13:00 Hamlet英文团只有在主动删除水族馆时才替换。",
+          "按10:00开门入场，优先礼拜堂、舞厅、炮廓与海峡视线；12:25无条件收口。9月7日为周一，不把周末限定的Hamlet活动写进主线。",
       },
       {
         time: "12:35–13:25",
@@ -132,7 +132,7 @@ const overrides = {
         time: "抵达Malmö C后15–20分钟",
         title: "步行入住Sky Hotel Malmö City",
         detail:
-          "按Kaptensgatan 1导航，走明亮主路；前台确认早餐、寄存和9月12日退房安排。",
+          "按Kaptensgatan 1导航，走明亮主路；确认早餐与9月12日退房规则。Sky官方FAQ未把Malmö列入退房后寄存城市，9月12日改用Malmö C官方储物柜。",
       },
     ],
     transit: [
@@ -168,14 +168,14 @@ const overrides = {
       },
     ],
     transport: [
-      "Helsingør站柜满或行李超尺时，删除景点并直接跨海入住，不拖箱走炮廓和港区",
+      "Helsingør寄存未在出发前获得具体订单/书面确认时，删除景点并直接跨海入住，不拖箱走炮廓和港区",
       "跨海后在Malmö C下车，步行到Kaptensgatan 1；Hyllie只在次日作为会场站使用",
     ],
   },
   sep08: {
     stay: "Sky Hotel Malmö City · Kaptensgatan 1 · 已确认第2晚",
     summary:
-      "Workshop/Tutorial以最终program为准。住宿在Malmö市中心，不是Hyllie步行区：每次去会场都要为步行、候车、3分钟列车和入场合计预留约35–45分钟。",
+      "ECCV已公布9月8–9日Workshop/Tutorial清单与09:00/14:00起始批次；个人场次、房间和签到仍以最终program为准。住宿在Malmö市中心，不是Hyllie步行区：每次去Malmömässan都要为步行、候车、列车和入场合计预留约35–45分钟。",
     route:
       "Sky Hotel Malmö City → Triangeln / Malmö C → Hyllie → Malmömässan → 市区住宿",
     main: [
@@ -191,17 +191,17 @@ const overrides = {
           "步行到Triangeln或Malmö C，乘直达列车到Hyllie，再步行入场；目标首场前20–30分钟到达对应建筑。",
       },
       {
-        time: "AM / Full-day",
+        time: "09:00批次 / Full-day",
         title: "Workshop / Tutorial",
-        detail: "官网未发布分钟program前不虚构开场；茶歇问一个具体论文问题。",
+        detail: "公开页面已列出09:00与14:00起始批次；本人选择的房间、签到与更细分钟表只认最终program。茶歇问一个具体论文问题。",
       },
       {
         time: "官方午餐时段",
         title: "会议午餐与换桌交流",
-        detail: "是否含餐以注册类别为准；优先和同研究方向的人同桌。",
+        detail: "Full/Student Full与Workshop/Tutorial注册均包含对应参会日午餐；现场权益仍以本人注册确认信为准。优先和同研究方向的人同桌。",
       },
       {
-        time: "PM / Full-day",
+        time: "14:00批次 / Full-day",
         title: "继续同一研究线",
         detail: "不为多听几场频繁换房；记录会后要跟进的具体材料。",
       },
@@ -267,7 +267,7 @@ const overrides = {
       {
         time: "17:30–18:50（条件式）",
         title: "Malmö Konsthall",
-        detail: "免费入场；按周三晚间开放执行。18:50离馆，不参加不懂语言的长导览。",
+        detail: "免费入场；周三开放至19:00。本日可看Bouchra Khalili《How to Call a Ghost》（展期至9月13日）；18:50离馆，不参加不懂语言的长导览。",
       },
       {
         time: "19:00–20:30",
@@ -301,7 +301,7 @@ const overrides = {
   sep10: {
     stay: "Sky Hotel Malmö City · Kaptensgatan 1 · 已确认第4晚",
     route:
-      "Sky Hotel Malmö City → Triangeln / Malmö C → Malmö Arena / Malmömässan → 市区住宿",
+      "Sky Hotel Malmö City → Triangeln / Malmö C → Malmö Arena → 市区住宿",
     main: [
       {
         time: "首场前70–55分钟",
@@ -355,7 +355,7 @@ const overrides = {
         buffer: "另留15–20分",
         ticket: "Skånetrafiken",
         official: links.skane,
-        map: mapRoute("Sky Hotel Malmö City", "Malmömässan"),
+        map: mapRoute("Sky Hotel Malmö City", "Malmö Arena"),
       },
     ],
   },
@@ -873,14 +873,14 @@ const overrides = {
     stay: "Flåm车站—码头步行圈 · 连住第1晚",
     title: "09:50巴士接12:10峡湾船：完整穿过Nærøyfjord",
     summary:
-      "09:50–10:55从Voss Stop A乘官方巴士到Gudvangen Stop H，保留75分钟码头缓冲；12:10–14:10乘正规观光船完整穿过UNESCO Nærøyfjord到Flåm。时间已按运营方2026年9月表对齐。",
+      "目标09:50从Voss Stop A乘VY456到Gudvangen ferjekai；当前规划器对到达分钟存在10:50/10:55显示差异，实际订单优先。若与目标12:10–14:10 Gudvangen→Flåm观光船能组成同日可售组合，仍有约75–80分钟码头缓冲。",
     route:
-      "Voss Stop A 09:50 → Gudvangen Stop H 10:55 → 12:10 Nærøyfjord船 → Flåm 14:10 → 住宿",
+      "Voss Stop A目标09:50 → Gudvangen ferjekai约10:50/10:55 → 目标12:10 Nærøyfjord船 → Flåm约14:10 → 住宿",
     main: [
       { time: "07:30–08:30", title: "早餐、退房与路餐", detail: "确认巴士、12:10船票、Flåm两晚住宿和码头信息。" },
       { time: "09:20–09:35", title: "到Voss Bus Terminal Stop A", detail: "火车站旁但不要等在铁路站台；核对VY456 / Norway’s Best车辆。" },
-      { time: "09:50–10:55", title: "Voss → Gudvangen官方巴士", detail: "当前2026季节表每日运行；以票面、车辆和临时公告为准。" },
-      { time: "10:55–11:20", title: "确认Stop H、码头与报到位置", detail: "先找到票面码头、洗手间和行李规则，再吃饭。" },
+      { time: "目标09:50–约10:50/10:55", title: "Voss → Gudvangen VY456", detail: "规划器到达分钟显示可能不同；以实际票面、车辆和临时公告为准。" },
+      { time: "到达后–11:20", title: "确认ferjekai、码头与报到位置", detail: "先找到票面码头、洗手间和行李规则，再吃饭。" },
       { time: "11:20–11:50", title: "Gudvangen快速热食", detail: "只点能在30分钟内完成的一份热食；排队长就用路餐。" },
       { time: "11:50–12:10", title: "登船准备", detail: "回到码头、核对二维码和行李；不去Viking Valley。" },
       { time: "12:10–14:10", title: "Gudvangen → Flåm Nærøyfjord观光船", detail: "完整航段约2小时；外甲板风冷时回舱，全程无需划船。" },
@@ -892,10 +892,10 @@ const overrides = {
       {
         mode: "官方巴士 VY456",
         route: "Voss Stop A → Gudvangen Stop H",
-        time: "09:50–10:55",
-        duration: "1时05分",
-        buffer: "距12:10开船75分钟",
-        ticket: "Norway’s Best实际订单",
+        time: "目标09:50–约10:50/10:55",
+        duration: "约60–65分，以票面为准",
+        buffer: "距目标12:10开船约75–80分钟",
+        ticket: "Vy / 实际运营方订单",
         official: links.vossBus,
         map: mapRoute("Voss Station", "Gudvangen Ferry Terminal"),
       },
@@ -911,26 +911,26 @@ const overrides = {
       },
     ],
     transport: [
-      "当前官方组合是09:50–10:55巴士 + 12:10–14:10峡湾船，不再写‘按实际船票’却不给可执行主线",
-      "巴士到船有75分钟，先认码头再吃饭；不把Viking Valley塞进缓冲",
+      "当前可执行目标是09:50 VY456 + 12:10–14:10峡湾船；到达分钟存在10:50/10:55显示差异，最终组合只认实际可售订单",
+      "巴士到船约75–80分钟，先认码头再吃饭；不把Viking Valley塞进缓冲",
       "船停航只通过运营方改签，不找小船或出租艇替代",
     ],
     timeCheck: {
-      status: "官方时刻已对齐",
-      note: "Stop A 09:50发车、Stop H 10:55抵达、12:10开船、14:10到Flåm；执行前48小时复核。",
+      status: "目标日组合已核对；仍以出票结果为准",
+      note: "目标09:50从Stop A发车，规划器约10:50/10:55到Gudvangen ferjekai；目标12:10开船、约14:10到Flåm。购票时与前48小时复核。",
     },
     execution: {
-      grade: "A｜75分钟换乘缓冲，水陆一条线",
+      grade: "A｜约75–80分钟换乘缓冲，水陆一条线",
       tone: "good",
       basis: "官方巴士和峡湾船在同一运营体系中形成稳定衔接。",
       anchors: [
         { time: "09:20", title: "到Stop A", detail: "核对车辆。" },
-        { time: "09:50–10:55", title: "巴士", detail: "Voss→Gudvangen。" },
+        { time: "目标09:50–约10:50/10:55", title: "巴士", detail: "Voss→Gudvangen；只认票面。" },
         { time: "11:50", title: "回码头", detail: "停止午餐。" },
         { time: "12:10–14:10", title: "峡湾船", detail: "Gudvangen→Flåm。" },
       ],
       prep: ["下载巴士、船与Flåm住宿订单", "准备路餐和防风层", "贵重物随身"],
-      buffers: [{ math: "10:55到→12:10开船", result: "75分钟" }],
+      buffers: [{ math: "约10:50/10:55到→目标12:10开船", result: "约75–80分钟" }],
       hardCutoff: "11:50回到票面码头，停止吃饭和拍照。",
       dropOrder: ["Gudvangen热食改路餐", "Flåm Railway Museum", "绝不删除船前缓冲"],
       recheck: [
@@ -1145,9 +1145,9 @@ const confirmedFlightCorrections = {
     stay: "Bergen Station / Nonneseter步行圈 · 1晚（待订）",
     title: "ECCV后赶17:50直飞：下午13:30是离会硬截止",
     summary:
-      "按你已确认的9月12日17:50 CPH→BGO直飞重算：上午保留ECCV个人最终义务，13:30必须离开Hyllie会场，回Sky Hotel取行李后经Triangeln直达CPH。目标15:15前进入航站楼，17:50起飞；落地BGO后只轻轨进城、入住和休息。",
+      "按你已确认的9月12日17:50 CPH→BGO直飞重算：07:00从Sky Hotel退房，先把适配46×60×85 cm大柜的大件存入Malmö C官方储物柜，再乘直达车去Malmö Arena。13:30必须离会，回Malmö C取件后直接乘跨境列车到CPH；目标15:15前进入航站楼。落地BGO后只轻轨进城、入住和休息。",
     route:
-      "Sky Hotel退房寄存 → Hyllie会场 → 13:30离会 → Sky Hotel取行李 → Triangeln → CPH → 17:50 BGO → Bergen Station住宿",
+      "Sky Hotel退房 → Malmö C官方储物柜 → Malmö Arena → 13:30离会 → Malmö C取件 → CPH → 17:50 BGO → Bergen Station住宿",
     load: "高 · 会议最终日 + 跨境列车 + 17:50直飞",
     bookingUrl: links.cphFlights,
     food: [
@@ -1160,22 +1160,29 @@ const confirmedFlightCorrections = {
     ],
     safety: [
       "护照、电脑、药物和订单随身；托运行李不放电子设备、证件或充电宝",
+      "先实测柜体：大柜内尺寸46×60×85 cm；不适配或无空柜时只用已预订商业寄存，不能临时赌酒店服务",
       "跨境列车异常立即按运营方改线；抵达Bergen后只入住，不夜游",
     ],
     verified:
-      "17:50起飞由你的实际航班确认；Sky Hotel地址、跨境列车与BGO轻轨为官方交通锚点。到达时间、航司截载与登机口只认票面。",
+      "17:50起飞由你的实际航班确认；Malmö C储物柜的尺寸、价格和规则来自Jernhusen官方页。Sky Hotel官方FAQ未把Malmö列入退房后寄存城市，因此不再假定酒店可存件。到达时间、航司截载与登机口只认票面。",
     main: [
       {
-        time: "07:00–07:40",
-        title: "Sky Hotel退房、寄存与飞行文件复核",
+        time: "07:00–07:25",
+        title: "Sky Hotel退房并携全部行李前往Malmö C",
         detail:
-          "大件寄存在Kaptensgatan 1；护照、电脑、药物和登机材料随身。把17:50航班、托运截止、Sky Hotel取件与Bergen住宿离线保存。",
+          "Sky官方FAQ未把Malmö列入退房后行李寄存城市，不再默认酒店可寄存。护照、电脑、药物和登机材料随身；沿明亮主路步行约15–20分钟到Malmö C。",
+      },
+      {
+        time: "07:25–07:45",
+        title: "Malmö C官方储物柜存件",
+        detail:
+          "先实测大件是否适配46×60×85 cm内尺寸；大柜现公布69 SEK/小时、24小时最高299 SEK，以现场为准。拍下柜号和取件码，证件、电脑、药物与充电宝随身。无适配空柜时只切换已预订商业寄存。",
       },
       {
         time: "个人首场前50分钟",
-        title: "Sky Hotel → Hyllie会场",
+        title: "Malmö C → Hyllie → Malmö Arena",
         detail:
-          "经Triangeln/Malmö C乘直达车到Hyllie；住宿不在会场步行区。",
+          "从Malmö C乘直达车到Hyllie，步行进Malmö Arena；目标个人首场前20–30分钟到场。主会地点不再误写为Malmömässan。",
       },
       {
         time: "上午–13:20",
@@ -1184,27 +1191,22 @@ const confirmedFlightCorrections = {
           "优先本人报告、作者义务与已约会面。13:20开始收口；若官方强制义务在13:30后，它与17:50航班实质冲突，网站不伪造兼容。",
       },
       {
-        time: "13:30–14:05",
-        title: "Hyllie → Sky Hotel Malmö City",
+        time: "13:30–13:50",
+        title: "Malmö Arena → Hyllie → Malmö C",
         detail:
-          "13:30硬离会；乘第一班合适列车回Triangeln/Malmö C，步行去Kaptensgatan 1。",
+          "13:30硬离会；步行回Hyllie，乘第一班合适直达车到Malmö C。不回Sky Hotel、不绕Triangeln。",
       },
       {
-        time: "14:05–14:20",
-        title: "取行李并检查寄存件",
-        detail: "不在酒店吃饭；取件后立即去Triangeln。",
+        time: "13:50–14:10",
+        title: "Malmö C取行李并转跨境站台",
+        detail:
+          "输入柜码取净行李，逐件核对后直接转跨境站台；不离站吃饭，不跑动追车。",
       },
       {
-        time: "14:20–14:40",
-        title: "步行到Triangeln并进站",
+        time: "目标14:15–15:15",
+        title: "Malmö C → Copenhagen Airport",
         detail:
-          "用Skånetrafiken/Øresundståg实时路线；大件行李不跑动追车。",
-      },
-      {
-        time: "目标14:40–15:15",
-        title: "Triangeln → Copenhagen Airport",
-        detail:
-          "选能在15:15前进入Terminal 3的直达跨境列车；开车前48小时再核对施工和边检。",
+          "乘能在15:15前进入Terminal 3的直达跨境列车；通常约20–25分钟，并保留错过一班的恢复空间。开车前48小时再核对施工和边检。",
       },
       {
         time: "15:15–17:20",
@@ -1238,23 +1240,33 @@ const confirmedFlightCorrections = {
     transit: [
       {
         mode: "区域列车 + 步行",
-        route: "Hyllie会场 → Sky Hotel → Triangeln",
-        time: "13:30–14:40",
-        duration: "约70分钟含取行李",
-        buffer: "13:30硬离会",
+        route: "Sky Hotel → Malmö C存件 → Hyllie / Malmö Arena",
+        time: "07:00–个人首场前",
+        duration: "步行15–20分＋存件20分＋列车约7分",
+        buffer: "只有行李适配且有可用柜时执行；否则用已预订寄存",
         ticket: "Skånetrafiken",
         official: links.skane,
-        map: mapRoute("Malmömässan", "Sky Hotel Malmö City"),
+        map: mapRoute("Sky Hotel Malmö City", "Malmö Arena via Malmö Central Station"),
+      },
+      {
+        mode: "区域列车 + 取件",
+        route: "Malmö Arena → Hyllie → Malmö C储物柜",
+        time: "13:30–14:10",
+        duration: "约40分钟含步行、候车和取件",
+        buffer: "13:30硬离会；不回酒店",
+        ticket: "Skånetrafiken + Jernhusen柜码",
+        official: "https://www.jernhusen.se/hitta-din-station/malmo-centralstation/forvaringsboxar/",
+        map: mapRoute("Malmö Arena", "Malmö Central Station"),
       },
       {
         mode: "Øresundståg",
-        route: "Triangeln → Copenhagen Airport Terminal 3",
-        time: "目标14:40–15:15",
-        duration: "列车通常约20–30分钟",
+        route: "Malmö C → Copenhagen Airport Terminal 3",
+        time: "目标14:15–15:15",
+        duration: "直达列车通常约20–25分钟",
         buffer: "目标比起飞早至少2小时35分钟进航站楼",
         ticket: "Skånetrafiken / Øresundståg",
         official: links.oresund,
-        map: mapRoute("Triangeln Station Malmö", "Copenhagen Airport Terminal 3"),
+        map: mapRoute("Malmö Central Station", "Copenhagen Airport Terminal 3"),
       },
       {
         mode: "已确认直飞",
@@ -1284,7 +1296,7 @@ const confirmedFlightCorrections = {
         ticket: "ECCV注册与本人最终program。",
         tour: "13:20开始收口，13:30离开会场。",
         url: "https://eccv.ecva.net/Conferences/2026/Dates",
-        map: mapSearch("Malmömässan"),
+        map: mapSearch("Malmö Arena"),
       },
     ],
     foods: [
@@ -1295,7 +1307,7 @@ const confirmedFlightCorrections = {
         note: "会场餐排队长就用随身路餐；13:20开始收口，13:30必须离会。",
         price: "按ECCV权益或现场价格",
         tier: "€",
-        near: "Malmömässan",
+        near: "Malmö Arena",
         meal: "午餐",
         booking: "不另订餐厅",
         url: "https://eccv.ecva.net/Conferences/2026/Registration",
@@ -1304,8 +1316,8 @@ const confirmedFlightCorrections = {
         imageLabel: "会议自助午餐场景参考；ECCV实际餐食以现场为准",
         fallbackImage: "/nordic-dubai-field-guide/images/localized/Malmomassan-5583338035.jpg",
         fallbackImageSource: "https://commons.wikimedia.org/wiki/File:Malm%C3%B6m%C3%A4ssan.jpg",
-        fallbackImageLabel: "Malmömässan会场实景备用图",
-        map: mapSearch("Malmömässan"),
+        fallbackImageLabel: "Malmömässan会务区参考图；本日主会地点为相邻Malmö Arena",
+        map: mapSearch("Malmö Arena"),
       },
       {
         name: "CPH安检后顺路补给",
@@ -1329,21 +1341,23 @@ const confirmedFlightCorrections = {
     ],
     sources: [
       { label: "ECCV日期", url: "https://eccv.ecva.net/Conferences/2026/Dates", type: "官网" },
-      { label: "Sky Hotel Malmö City", url: links.skyHotel, type: "住宿官网" },
+      { label: "ECCV会场", url: "https://eccv.ecva.net/Conferences/2026/Venues", type: "官网" },
+      { label: "Malmö C储物柜", url: "https://www.jernhusen.se/hitta-din-station/malmo-centralstation/forvaringsboxar/", type: "车站官方" },
+      { label: "Sky Hotel FAQ", url: "https://skyhotelapartments.se/faq", type: "住宿官网" },
       { label: "Øresundståg", url: links.oresund, type: "运营方" },
       { label: "CPH航班", url: links.cphFlights, type: "机场官网" },
       { label: "BGO机场交通", url: links.bergenAirport, type: "公共交通" },
     ],
-    visual: { slot: 6, label: "ECCV会场 → Sky Hotel取行李 → CPH 17:50 → Bergen" },
+    visual: { slot: 6, label: "Malmö Arena → Malmö C取行李 → CPH 17:50 → Bergen" },
     transport: [
       "17:50 CPH→BGO起飞时间已由你确认；到达时间和航司截载只认票面",
       "13:30是Hyllie离会硬截止；13:30后的强制会议义务与该航班不可同时满足",
-      "Sky Hotel在Kaptensgatan 1，必须回市中心取行李，不能按Hyllie酒店计算",
+      "Sky官方FAQ未列出Malmö退房后寄存；07:25先用Malmö C官方柜，13:30离会后回同站取件",
     ],
     timeCheck: {
       status: "17:50起飞已确认；地面链路可执行",
       note:
-        "固定硬锚点为13:30离开Hyllie会场、15:15前进入CPH Terminal 3和17:50起飞。BGO到达时刻、托运截止与登机口以实际订单为准；落地后按相对时间轻轨进城。",
+        "固定硬锚点为07:25在Malmö C存件、13:30离开Malmö Arena、14:10前完成取件、15:15前进入CPH Terminal 3和17:50起飞。BGO到达、托运截止与登机口以实际订单为准。",
     },
     rain: {
       trigger: "会议拖延、跨境列车异常或航班延误",
@@ -1352,24 +1366,24 @@ const confirmedFlightCorrections = {
         "航班仍计划17:50起飞时，不因延误预报而晚到机场。跨境列车异常时立即按运营方改线，不加任何会后活动。",
     },
     execution: {
-      grade: "B＋｜17:50飞行可执行，但13:30必须离会",
+      grade: "A−｜Malmö C同站寄存消除回酒店折返；13:30仍是硬截止",
       tone: "caution",
       basis:
-        "真实瓶颈不是航班是回Malmö市中心取行李。按13:30离会、15:15前进航站楼计算，可保留约2小时35分钟机场余量。",
+        "07:25先把适配大柜的行李放在Malmö C，下午从Hyllie回同站取件后直接跨境，较回Kaptensgatan 1再走Triangeln减少一次步行折返。15:15前进航站楼仍可保留约2小时35分钟机场余量。",
       anchors: [
         { time: "13:30", title: "离开Hyllie会场", detail: "不再加会面或午餐。" },
-        { time: "14:05–14:20", title: "Sky Hotel取行李", detail: "Kaptensgatan 1。" },
+        { time: "13:50–14:10", title: "Malmö C取行李", detail: "柜号、取件码与逐件清点。" },
         { time: "15:15前", title: "进入CPH Terminal 3", detail: "托运和安检只认航司截止。" },
         { time: "17:50", title: "CPH→BGO", detail: "到达用票面时间。" },
       ],
       prep: [
-        "确认Sky Hotel寄存和14:05前后取件",
+        "实测行李是否适配46×60×85 cm大柜；另备已预订商业寄存作为无空柜恢复方案",
         "保存17:50航班、托运截止、登机时间与Bergen酒店订单",
         "前48小时查Øresundståg施工与边检",
       ],
       buffers: [
-        { math: "13:30离会→14:20取好行李", result: "50分钟" },
-        { math: "14:20离酒店→15:15进CPH", result: "55分钟目标窗口" },
+        { math: "13:30离会→14:10取好行李", result: "40分钟" },
+        { math: "14:10在Malmö C→15:15进CPH", result: "65分钟目标窗口，容纳错过一班" },
         { math: "15:15进航站楼→17:50起飞", result: "2小时35分钟" },
       ],
       hardCutoff: "13:30离开Hyllie会场；15:15前进CPH Terminal 3；17:20前到登机口。",
@@ -1383,28 +1397,31 @@ const confirmedFlightCorrections = {
         "航班延误也按原机场截止到达；跨境列车异常只按运营方改线。落地晚就通知Bergen酒店，不夜游。",
     },
     backup: {
-      trigger: "会议拖延、跨境交通异常或大雨",
-      title: "13:30离会—取行李—CPH—17:50飞行直线",
+      trigger: "Malmö C无适配空柜、会议拖延、跨境交通异常或大雨",
+      title: "已预订寄存—13:30离会—Malmö C取件—CPH—17:50飞行",
       verdict: "默认备选 · 删除全部会后支线",
       route: [
-        { label: "ECCV会场", query: "Malmömässan", note: "13:30离开" },
-        { label: "Sky Hotel", query: "Sky Hotel Malmö City", note: "取行李" },
+        { label: "Malmö C寄存", query: "Malmö Central Station luggage lockers", note: "早晨存件；无空柜只用预订备选" },
+        { label: "ECCV会场", query: "Malmö Arena", note: "13:30离开" },
+        { label: "Malmö C", query: "Malmö Central Station", note: "14:10前取件" },
         { label: "CPH", query: "Copenhagen Airport Terminal 3", note: "15:15前" },
         { label: "BGO", query: "Bergen Airport", note: "票面到达" },
         { label: "Bergen住宿", query: "Bergen Station", note: "" },
       ],
       timeline: [
+        ["07:25–07:45", "Malmö C存件", "无适配柜只用已预订商业寄存。"],
         ["13:30", "离开会场", "不再加活动。"],
-        ["14:05–14:20", "Sky Hotel取行李", "立即去Triangeln。"],
+        ["13:50–14:10", "Malmö C取行李", "立即转跨境站台。"],
         ["15:15前", "进CPH", "守住托运与安检。"],
         ["17:50", "飞BGO", "到达以票面为准。"],
         ["落地后", "轻轨进城入住", "不夜游。"],
       ],
-      transport: "Hyllie—Malmö市中心—CPH—BGO按实时运行与航班订单执行。",
+      transport: "Malmö Arena—Hyllie—Malmö C—CPH—BGO按实时运行与航班订单执行。",
       meal: "会场早午餐、随身路餐或CPH安检后热食。",
       booking: [
         { label: "Øresundståg", url: links.oresund, note: "检查跨境运行" },
         { label: "17:50航班", url: links.cphFlights, note: "只认实际订单" },
+        { label: "Malmö C储物柜", url: "https://www.jernhusen.se/hitta-din-station/malmo-centralstation/forvaringsboxar/", note: "尺寸、价格和规则" },
         { label: "Skyss", url: links.bergenAirport, note: "BGO轻轨" },
       ],
       exit: "13:30离会；到Bergen后只入住。",
@@ -1751,7 +1768,7 @@ export function applyBalancedAuditDay(baseDay, legacyOverride) {
       execution: audited.execution
         ? {
             ...audited.execution,
-            grade: "A−｜市中心住宿需乘车通勤；精确program待发布",
+            grade: "A−｜市中心住宿需乘车通勤；个人场次与房间待最终program",
           }
         : audited.execution,
     };
@@ -1814,7 +1831,7 @@ export function applyBalancedHotels(hotels) {
         area: "Sky Hotel Malmö City · Kaptensgatan 1",
         why: "已确认住宿；在Malmö市中心，距Triangeln和Malmö C步行约10–15分钟。",
         return: "去ECCV需步行至Triangeln/Malmö C、乘直达车到Hyllie，再步行入场；单程门到门按25–35分钟。",
-        avoid: "不要再按Hyllie会场步行酒店计算，也不要把Hyllie写成取行李地点。",
+        avoid: "不要按Hyllie会场步行酒店计算；Sky官方FAQ未把Malmö列入退房后寄存城市，9月12日使用Malmö C官方储物柜。",
         examples: "Sky Hotel Malmö City（已确认）",
       };
     }
@@ -1846,7 +1863,7 @@ export function applyBalancedBookings(bookings) {
       return {
         ...item,
         title: "15天核心飞行：9.12 17:50 CPH→BGO",
-        note: "17:50起飞已由你确认；把实际到达、托运截止和登机时间写入离线订单。13:30离开Hyllie会场，15:15前进CPH。",
+        note: "17:50起飞已由你确认；早晨把适配大柜的行李存Malmö C，13:30离开Malmö Arena、14:10前同站取件、15:15前进CPH。",
         url: links.cphFlights,
       };
     }
@@ -1854,7 +1871,7 @@ export function applyBalancedBookings(bookings) {
       return {
         ...item,
         title: "9.14 Voss巴士＋12:10 Nærøyfjord船",
-        note: "目标组合为09:50–10:55官方巴士、12:10–14:10 Gudvangen→Flåm船；同日一起核对后再购。",
+        note: "目标组合为09:50 VY456（约10:50/10:55到）、12:10–14:10 Gudvangen→Flåm船；规划器显示可能变化，同日一起核对后再购。",
       };
     }
     if (item.id === "rail") {
@@ -1880,8 +1897,8 @@ export function applyBalancedSources(sources) {
     if (source.category === "峡湾运营方") {
       return {
         ...source,
-        scope: "9.14 Voss 09:50→Gudvangen 10:55；12:10→14:10 Nærøyfjord船",
-        status: "2026年9月官方时刻已对齐；前48小时复核",
+        scope: "9.14 Voss 09:50→Gudvangen约10:50/10:55；12:10→14:10 Nærøyfjord船",
+        status: "目标日组合已核对；到达分钟存在10:50/10:55显示差异，购票与前48小时再查",
       };
     }
     return source;
@@ -2126,7 +2143,7 @@ const finalizeCoreDay = (day) => {
             ...correctedDay.execution,
             grade:
               day.id === "sep08"
-                ? "A−｜市中心住宿需乘车通勤；精确program待发布"
+                ? "A−｜市中心住宿需乘车通勤；个人场次与房间待最终program"
                 : correctedDay.execution.grade,
           }
         : correctedDay.execution,
@@ -2175,6 +2192,41 @@ const finalizeCoreDay = (day) => {
   return audited;
 };
 
+const routeTicketFallback = {
+  bus: "上车前持有运营方有效票；班次、站位和停靠点以票面及现场屏幕为准。",
+  ferry: "使用对应日期、方向和航次的有效船票；按票面最晚登船时间到码头。",
+  flight: "航班号、托运、安检和登机截止只认实际订单。",
+  gondola: "只在当日运营和天气成立时使用实际票；停运即删除本段。",
+  shuttle: "使用已预订接驳票；集合点和时间只认订单。",
+  train: "上车前持有有效车票；站台、施工和跨境检查按实时公告。",
+  tram: "上车前购买并激活覆盖本段的当地公共交通票。",
+  walk: "步行免费；遵守现场开放、通行和安全标识。",
+};
+
+const completeCoreRouteData = (day) => {
+  if (!day.routeData?.stops) return day;
+  return {
+    ...day,
+    routeData: {
+      ...day.routeData,
+      stops: day.routeData.stops.map((item) => {
+        const mode = item.arriveBy || "walk";
+        const dwell = item.dwell || "按本日时间轴";
+        return {
+          ...item,
+          local: item.local || item.title,
+          address: item.address || `${item.title}（以编号点坐标、实际订单和现场入口为准）`,
+          arriveBy: mode,
+          leg: item.leg || `由上一节点到达；停留${dwell}`,
+          dwell,
+          task: item.task || "按本日时间轴执行；现场变化时优先服从运营方指引。",
+          ticket: item.ticket || routeTicketFallback[mode] || routeTicketFallback.walk,
+        };
+      }),
+    },
+  };
+};
+
 export function applyBalancedPlanAudit(plans) {
   return plans.map((plan) => {
     if (plan.id !== "core") return plan;
@@ -2189,7 +2241,8 @@ export function applyBalancedPlanAudit(plans) {
     ]);
     return {
       ...cleaned,
-      days: cleaned.days.map(finalizeCoreDay),
+      dates: "已锁定排期 · 9.03—9.17",
+      days: cleaned.days.map(finalizeCoreDay).map(completeCoreRouteData),
       groups: [
         ["哥本哈根与西兰", "D1–5"],
         ["Malmö · ECCV", "D6–10"],
@@ -2204,7 +2257,7 @@ export function applyBalancedPlanAudit(plans) {
         lodging:
           "Bob W Copenhagen Østerbro 4晚＋Sky Hotel Malmö City 5晚＋Bergen 1晚＋Voss 1晚＋Flåm 2晚＋OSL机场1晚。",
         transfer:
-          "高：9月12日13:30离会、回市中心取行李、15:15前进CPH与17:50直飞；9月13日18:29铁路；9月14日09:50巴士＋12:10船；9月15日两段官方接驳；9月16日08:20＋10:02铁路。",
+          "高：9月12日早晨在Malmö C存件、13:30离会、14:10前同站取件、15:15前进CPH与17:50直飞；9月13日18:29铁路；9月14日09:50巴士＋12:10船；9月15日两段官方接驳；9月16日08:20＋10:02铁路。",
         weather:
           "中：Ulriken和Stegastein都是可独立删除项；Nærøyfjord船异常只走运营方改签，铁路段用联程与机场酒店吸收波动。",
         booking:
@@ -2214,4 +2267,4 @@ export function applyBalancedPlanAudit(plans) {
   });
 }
 
-export const balancedAuditOverrides = overrides;
+export const balancedAuditOverrides = { ...overrides, ...confirmedFlightCorrections };
