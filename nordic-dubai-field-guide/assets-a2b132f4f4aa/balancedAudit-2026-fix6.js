@@ -11,6 +11,8 @@ const moxyUrl = "https://www.marriott.com/en-us/hotels/bgoox-moxy-bergen/overvie
 const moxyAddress = "Solheimsgaten 3, 5058 Bergen";
 const moxyCheckIn =
   "到Bar Moxy/前台报姓名，并从个人离线订单出示右上角确认号，现场付款办理入住；如问预订来源，回答“公司行政预订”。酒店当地15:00后办理入住；提前到可先寄存行李。确认号只保存在个人离线订单，不写入本公开网页。";
+const moxyVerified =
+  "Moxy Bergen官方地址、15:00入住、24小时前台与行李寄存已核对；具体代订入住话术按个人订单执行。";
 
 const replaceDeep = (value, replacements) => {
   if (typeof value === "string") {
@@ -115,15 +117,19 @@ const patchMoxyDay = (day) => {
       ["Bergen Station步行圈酒店", "Moxy Bergen"],
       ["Bergen Station步行圈住宿", "Moxy Bergen"],
       ["Bergen住宿", "Moxy Bergen"],
+      [
+        "https://www.google.com/maps/dir/?api=1&origin=Bergen%20Airport&destination=Bergen%20Station&travelmode=transit",
+        "https://www.google.com/maps/dir/?api=1&origin=Bergen%20Airport&destination=Moxy%20Bergen%20Solheimsgaten%203&travelmode=transit",
+      ],
     ]);
     return {
       ...corrected,
       stay: "Moxy Bergen · Solheimsgaten 3 · 已确认1晚",
       route:
         "Sky Hotel退房 → Malmö C官方储物柜 → ECCV最终日 → 取件 → CPH 17:50直飞 → BGO → Florida → Moxy Bergen",
-      verified:
-        (corrected.verified || "") +
-        "；Moxy Bergen官方地址、15:00入住、24小时前台与行李寄存已核对；具体代订入住话术按个人订单执行。",
+      verified: (corrected.verified || "").includes(moxyVerified)
+        ? corrected.verified
+        : `${corrected.verified || ""}；${moxyVerified}`,
       main: corrected.main?.map((item) =>
         item.title === "BGO → Nonneseter / Bergen Station"
           ? {
@@ -141,6 +147,12 @@ const patchMoxyDay = (day) => {
               }
             : item,
       ),
+      sources: corrected.sources?.some((source) => source.url === moxyUrl)
+        ? corrected.sources
+        : [
+            ...(corrected.sources || []),
+            { label: "Moxy Bergen", type: "住宿官网", url: moxyUrl },
+          ],
       backup: patchBackup(corrected.backup),
       routeData: patchRouteData(corrected.routeData, "sep12"),
     };
