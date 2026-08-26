@@ -1141,14 +1141,14 @@ const confirmedFlightCorrections = {
   sep12: {
     city: "马尔默 → 哥本哈根机场 → 卑尔根",
     country: "瑞典 → 丹麦 → 挪威",
-    phase: "ECCV最终日与17:50飞往Bergen",
+    phase: "ECCV最终日与17:55飞往Bergen",
     stay: "Bergen Station / Nonneseter步行圈 · 1晚（待订）",
-    title: "ECCV后赶17:50直飞：下午13:30是离会硬截止",
+    title: "ECCV后赶17:55直飞：下午13:30是离会硬截止",
     summary:
-      "按你已确认的9月12日17:50 CPH→BGO直飞重算：07:00从Sky Hotel退房，先把适配46×60×85 cm大柜的大件存入Malmö C官方储物柜，再乘直达车去Malmö Arena。13:30必须离会，回Malmö C取件后直接乘跨境列车到CPH；目标15:15前进入航站楼。落地BGO后只轻轨进城、入住和休息。",
+      "按SAS票面已确认的9月12日SK2872（17:55 CPH T3→19:20 BGO）重算：07:00从Sky Hotel退房，先把适配46×60×85 cm大柜的大件存入Malmö C官方储物柜，再乘直达车去Malmö Arena。13:30必须离会，回Malmö C取件后直接乘跨境列车到CPH；目标15:15前进入航站楼。落地BGO后只轻轨进城、入住和休息。",
     route:
-      "Sky Hotel退房 → Malmö C官方储物柜 → Malmö Arena → 13:30离会 → Malmö C取件 → CPH → 17:50 BGO → Bergen Station住宿",
-    load: "高 · 会议最终日 + 跨境列车 + 17:50直飞",
+      "Sky Hotel退房 → Malmö C官方储物柜 → Malmö Arena → 13:30离会 → Malmö C取件 → CPH → SK2872 17:55–19:20 → BGO → Bergen Station住宿",
+    load: "高 · 会议最终日 + 跨境列车 + 17:55直飞",
     bookingUrl: links.cphFlights,
     food: [
       "午餐使用ECCV会场餐或随身路餐；过安检后只有时间充足才买顺路热食",
@@ -1164,7 +1164,7 @@ const confirmedFlightCorrections = {
       "跨境列车异常立即按运营方改线；抵达Bergen后只入住，不夜游",
     ],
     verified:
-      "17:50起飞由你的实际航班确认；Malmö C储物柜的尺寸、价格和规则来自Jernhusen官方页。Sky Hotel官方FAQ未把Malmö列入退房后寄存城市，因此不再假定酒店可存件。到达时间、航司截载与登机口只认票面。",
+      "SAS SK2872票面已确认：9月12日17:55从CPH Terminal 3起飞、19:20抵达BGO、飞行1小时25分、最晚值机17:15、含1件托运行李；Malmö C储物柜的尺寸、价格和规则来自Jernhusen官方页。Sky Hotel官方FAQ未把Malmö列入退房后寄存城市，因此不再假定酒店可存件。航班状态、值机柜台与登机口仍以SAS App和机场屏幕为准。",
     main: [
       {
         time: "07:00–07:25",
@@ -1188,7 +1188,7 @@ const confirmedFlightCorrections = {
         time: "上午–13:20",
         title: "ECCV Main Conference Final Day",
         detail:
-          "优先本人报告、作者义务与已约会面。13:20开始收口；若官方强制义务在13:30后，它与17:50航班实质冲突，网站不伪造兼容。",
+          "优先本人报告、作者义务与已约会面。13:20开始收口；若官方强制义务在13:30后，它与17:55航班实质冲突，网站不伪造兼容。",
       },
       {
         time: "13:30–13:50",
@@ -1209,16 +1209,16 @@ const confirmedFlightCorrections = {
           "乘能在15:15前进入Terminal 3的直达跨境列车；通常约20–25分钟，并保留错过一班的恢复空间。开车前48小时再核对施工和边检。",
       },
       {
-        time: "15:15–17:20",
-        title: "CPH托运、安检与登机口",
+        time: "15:15–17:25",
+        title: "CPH Terminal 3托运、安检与登机口",
         detail:
-          "距17:50起飞约2小时35分钟。托运截止和登机时间以航司订单为准；17:20前到登机口。",
+          "距17:55起飞约2小时40分钟。票面最晚值机17:15，但不要卡截止办理；通过安检后按登机口方向移动，17:25前到登机口附近。",
       },
       {
-        time: "17:50–票面到达",
-        title: "CPH → BGO直飞",
+        time: "17:55–19:20",
+        title: "SAS SK2872 · CPH T3 → BGO",
         detail:
-          "17:50为你已确认的起飞时间；到达时刻、托运截止和登机口只认实际航班订单，不再用估算值伪装成票面时间。",
+          "票面为17:55起飞、19:20抵达，飞行1小时25分；V舱已确认，含1件托运行李，机上餐饮需另购。航班状态、值机柜台和登机口仍以SAS App与机场屏幕为准。",
       },
       {
         time: "落地+0:00–0:45",
@@ -1270,11 +1270,11 @@ const confirmedFlightCorrections = {
       },
       {
         mode: "已确认直飞",
-        route: "CPH → BGO",
-        time: "17:50起飞",
-        duration: "以实际航班订单为准",
-        buffer: "15:15前进航站楼，17:20前到登机口",
-        ticket: "已确认的实际航班订单",
+        route: "CPH Terminal 3 → BGO",
+        time: "17:55–19:20",
+        duration: "1小时25分（票面）",
+        buffer: "15:15前进T3；票面最晚值机17:15；17:25前到登机口附近",
+        ticket: "SAS SK2872 · V舱 · 1件托运行李",
         official: links.cphFlights,
         map: mapRoute("Copenhagen Airport", "Bergen Airport"),
       },
@@ -1348,22 +1348,22 @@ const confirmedFlightCorrections = {
       { label: "CPH航班", url: links.cphFlights, type: "机场官网" },
       { label: "BGO机场交通", url: links.bergenAirport, type: "公共交通" },
     ],
-    visual: { slot: 6, label: "Malmö Arena → Malmö C取行李 → CPH 17:50 → Bergen" },
+    visual: { slot: 6, label: "Malmö Arena → Malmö C取行李 → CPH 17:55 → Bergen" },
     transport: [
-      "17:50 CPH→BGO起飞时间已由你确认；到达时间和航司截载只认票面",
+      "17:55 CPH→BGO起飞时间已由你确认；到达时间和航司截载只认票面",
       "13:30是Hyllie离会硬截止；13:30后的强制会议义务与该航班不可同时满足",
       "Sky官方FAQ未列出Malmö退房后寄存；07:25先用Malmö C官方柜，13:30离会后回同站取件",
     ],
     timeCheck: {
-      status: "17:50起飞已确认；地面链路可执行",
+      status: "17:55起飞已确认；地面链路可执行",
       note:
-        "固定硬锚点为07:25在Malmö C存件、13:30离开Malmö Arena、14:10前完成取件、15:15前进入CPH Terminal 3和17:50起飞。BGO到达、托运截止与登机口以实际订单为准。",
+        "固定硬锚点为07:25在Malmö C存件、13:30离开Malmö Arena、14:10前完成取件、15:15前进入CPH Terminal 3和17:55起飞。BGO到达、托运截止与登机口以实际订单为准。",
     },
     rain: {
       trigger: "会议拖延、跨境列车异常或航班延误",
       title: "13:30仍硬离会，只保留取行李—CPH—BGO",
       detail:
-        "航班仍计划17:50起飞时，不因延误预报而晚到机场。跨境列车异常时立即按运营方改线，不加任何会后活动。",
+        "航班仍计划17:55起飞时，不因延误预报而晚到机场。跨境列车异常时立即按运营方改线，不加任何会后活动。",
     },
     execution: {
       grade: "A−｜Malmö C同站寄存消除回酒店折返；13:30仍是硬截止",
@@ -1374,22 +1374,22 @@ const confirmedFlightCorrections = {
         { time: "13:30", title: "离开Hyllie会场", detail: "不再加会面或午餐。" },
         { time: "13:50–14:10", title: "Malmö C取行李", detail: "柜号、取件码与逐件清点。" },
         { time: "15:15前", title: "进入CPH Terminal 3", detail: "托运和安检只认航司截止。" },
-        { time: "17:50", title: "CPH→BGO", detail: "到达用票面时间。" },
+        { time: "17:55", title: "CPH→BGO", detail: "到达用票面时间。" },
       ],
       prep: [
         "实测行李是否适配46×60×85 cm大柜；另备已预订商业寄存作为无空柜恢复方案",
-        "保存17:50航班、托运截止、登机时间与Bergen酒店订单",
+        "保存17:55航班、托运截止、登机时间与Bergen酒店订单",
         "前48小时查Øresundståg施工与边检",
       ],
       buffers: [
         { math: "13:30离会→14:10取好行李", result: "40分钟" },
         { math: "14:10在Malmö C→15:15进CPH", result: "65分钟目标窗口，容纳错过一班" },
-        { math: "15:15进航站楼→17:50起飞", result: "2小时35分钟" },
+        { math: "15:15进航站楼→17:55起飞", result: "2小时35分钟" },
       ],
       hardCutoff: "13:30离开Hyllie会场；15:15前进CPH Terminal 3；17:20前到登机口。",
       dropOrder: ["13:20后会面", "会后午餐", "全部观光；不删机场余量"],
       recheck: [
-        { label: "17:50航班订单", note: "到达、托运、登机口", url: links.cphFlights },
+        { label: "17:55航班订单", note: "到达、托运、登机口", url: links.cphFlights },
         { label: "Øresundståg", note: "跨境施工和实时运行", url: links.oresund },
         { label: "BGO轻轨", note: "Line 1晚间发车", url: links.bergenAirport },
       ],
@@ -1398,7 +1398,7 @@ const confirmedFlightCorrections = {
     },
     backup: {
       trigger: "Malmö C无适配空柜、会议拖延、跨境交通异常或大雨",
-      title: "已预订寄存—13:30离会—Malmö C取件—CPH—17:50飞行",
+      title: "已预订寄存—13:30离会—Malmö C取件—CPH—17:55飞行",
       verdict: "默认备选 · 删除全部会后支线",
       route: [
         { label: "Malmö C寄存", query: "Malmö Central Station luggage lockers", note: "早晨存件；无空柜只用预订备选" },
@@ -1413,14 +1413,14 @@ const confirmedFlightCorrections = {
         ["13:30", "离开会场", "不再加活动。"],
         ["13:50–14:10", "Malmö C取行李", "立即转跨境站台。"],
         ["15:15前", "进CPH", "守住托运与安检。"],
-        ["17:50", "飞BGO", "到达以票面为准。"],
+        ["17:55", "飞BGO", "到达以票面为准。"],
         ["落地后", "轻轨进城入住", "不夜游。"],
       ],
       transport: "Malmö Arena—Hyllie—Malmö C—CPH—BGO按实时运行与航班订单执行。",
       meal: "会场早午餐、随身路餐或CPH安检后热食。",
       booking: [
         { label: "Øresundståg", url: links.oresund, note: "检查跨境运行" },
-        { label: "17:50航班", url: links.cphFlights, note: "只认实际订单" },
+        { label: "17:55航班", url: links.cphFlights, note: "只认实际订单" },
         { label: "Malmö C储物柜", url: "https://www.jernhusen.se/hitta-din-station/malmo-centralstation/forvaringsboxar/", note: "尺寸、价格和规则" },
         { label: "Skyss", url: links.bergenAirport, note: "BGO轻轨" },
       ],
@@ -1862,8 +1862,8 @@ export function applyBalancedBookings(bookings) {
     if (item.id === "core-flights") {
       return {
         ...item,
-        title: "15天核心飞行：9.12 17:50 CPH→BGO",
-        note: "17:50起飞已由你确认；早晨把适配大柜的行李存Malmö C，13:30离开Malmö Arena、14:10前同站取件、15:15前进CPH。",
+        title: "15天核心飞行：9.12 17:55 CPH→BGO",
+        note: "17:55起飞已由你确认；早晨把适配大柜的行李存Malmö C，13:30离开Malmö Arena、14:10前同站取件、15:15前进CPH。",
         url: links.cphFlights,
       };
     }
@@ -2236,8 +2236,8 @@ export function applyBalancedPlanAudit(plans) {
       ["Hyllie住宿", "Sky Hotel Malmö City"],
       ["Hyllie酒店", "Sky Hotel Malmö City"],
       ["住进Hyllie", "住进Sky Hotel Malmö City"],
-      ["9月12日晚间直飞", "9月12日17:50直飞"],
-      ["9月12日CPH→BGO", "9月12日17:50 CPH→BGO"],
+      ["9月12日晚间直飞", "9月12日17:55直飞"],
+      ["9月12日CPH→BGO", "9月12日17:55 CPH→BGO"],
     ]);
     return {
       ...cleaned,
@@ -2253,15 +2253,15 @@ export function applyBalancedPlanAudit(plans) {
       decision: {
         ...cleaned.decision,
         recommendation:
-          "最佳版本：均衡深度。9月12日守住13:30离会和17:50飞行两个硬锚点，当晚住Bergen；9月13日完整看Bergen核心，再把两天留给UNESCO Nærøyfjord与Aurlandsfjord高差。",
+          "最佳版本：均衡深度。9月12日守住13:30离会和17:55飞行两个硬锚点，当晚住Bergen；9月13日完整看Bergen核心，再把两天留给UNESCO Nærøyfjord与Aurlandsfjord高差。",
         lodging:
           "Bob W Copenhagen Østerbro 4晚＋Sky Hotel Malmö City 5晚＋Bergen 1晚＋Voss 1晚＋Flåm 2晚＋OSL机场1晚。",
         transfer:
-          "高：9月12日早晨在Malmö C存件、13:30离会、14:10前同站取件、15:15前进CPH与17:50直飞；9月13日18:29铁路；9月14日09:50巴士＋12:10船；9月15日两段官方接驳；9月16日08:20＋10:02铁路。",
+          "高：9月12日早晨在Malmö C存件、13:30离会、14:10前同站取件、15:15前进CPH与17:55直飞；9月13日18:29铁路；9月14日09:50巴士＋12:10船；9月15日两段官方接驳；9月16日08:20＋10:02铁路。",
         weather:
           "中：Ulriken和Stegastein都是可独立删除项；Nærøyfjord船异常只走运营方改签，铁路段用联程与机场酒店吸收波动。",
         booking:
-          "先核对已订Bob W、Sky Hotel与9月12日17:50航班；补Bergen、Voss、Flåm两晚与OSL机场住宿。交通核对：18:29 Bergen→Voss、9月14日09:50巴士＋12:10船、9月15日接驳、9月16日Flåm→Oslo联程。",
+          "先核对已订Bob W、Sky Hotel与9月12日17:55航班；补Bergen、Voss、Flåm两晚与OSL机场住宿。交通核对：18:29 Bergen→Voss、9月14日09:50巴士＋12:10船、9月15日接驳、9月16日Flåm→Oslo联程。",
       },
     };
   });
