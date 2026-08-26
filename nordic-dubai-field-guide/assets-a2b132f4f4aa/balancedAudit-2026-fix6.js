@@ -126,7 +126,7 @@ const patchMoxyDay = (day) => {
       ...corrected,
       stay: "Moxy Bergen · Solheimsgaten 3 · 已确认1晚",
       route:
-        "Sky Hotel退房 → Malmö C官方储物柜 → ECCV最终日 → 取件 → CPH 17:50直飞 → BGO → Florida → Moxy Bergen",
+        "Sky Hotel退房 → Malmö C官方储物柜 → ECCV最终日 → 取件 → CPH 17:55直飞 → BGO → Florida → Moxy Bergen",
       verified: (corrected.verified || "").includes(moxyVerified)
         ? corrected.verified
         : `${corrected.verified || ""}；${moxyVerified}`,
@@ -201,7 +201,7 @@ export function applyBalancedHotels(hotels) {
           city: "Moxy Bergen",
           area: "Moxy Bergen · Solheimsgaten 3 · 已确认",
           why:
-            "承接9月12日17:50 CPH→BGO；从BGO乘Bybanen Line 1直达Florida，步行约5分钟到酒店。",
+            "承接9月12日17:55 CPH→BGO；从BGO乘Bybanen Line 1直达Florida，步行约5分钟到酒店。",
           return:
             "9月13日退房后从Florida乘Line 1到Nonneseter/Bergen Station寄存大件，再开始Bryggen主线。",
           avoid:
@@ -220,7 +220,7 @@ export function applyBalancedBookings(bookings) {
           ...item,
           title: "核对已订Bob W、Sky Hotel与Moxy Bergen；补Voss/Flåm/OSL住宿",
           note:
-            "9.03–07 Bob W、9.07–12 Sky Hotel、9.12–13 Moxy Bergen均已确认；Moxy现场报姓名＋离线确认号，预订来源答“公司行政预订”，15:00后入住。另订Voss 1晚、Flåm 2晚与OSL机场1晚。",
+            "9.03–07 Bob W、9.07–12 Sky Hotel、9.12–13 Moxy Bergen均已确认；Moxy现场报姓名＋离线确认号，预订来源答“公司行政预订”，15:00后入住。另订Voss 1晚、Flåm 1晚＋Vatnahalsen 1晚与OSL机场1晚。",
         }
       : item,
   );
@@ -240,9 +240,9 @@ export function applyBalancedPlanAudit(plans) {
           decision: {
             ...plan.decision,
             lodging:
-              "Bob W Copenhagen Østerbro 4晚＋Sky Hotel Malmö City 5晚＋Moxy Bergen 1晚（已确认）＋Voss 1晚＋Flåm 2晚＋OSL机场1晚。",
+              "Bob W Copenhagen Østerbro 4晚＋Sky Hotel Malmö City 5晚＋Moxy Bergen 1晚（已确认）＋Voss 1晚＋Flåm 1晚＋Vatnahalsen 1晚＋OSL机场1晚。",
             booking:
-              "已确认Bob W、Sky Hotel、Moxy Bergen与9月12日17:50航班；补Voss、Flåm两晚与OSL机场住宿。Moxy现场按离线订单办理入住，不在公开网页保存确认号。",
+              "已确认Bob W、Sky Hotel、Moxy Bergen与9月12日17:55航班；补Voss、Flåm一晚与Vatnahalsen一晚与OSL机场住宿。Moxy现场按离线订单办理入住，不在公开网页保存确认号。",
           },
         },
   );
