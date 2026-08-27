@@ -123,6 +123,13 @@ const patchSep16 = (day) => ({
     "早餐和午间路餐在Vatnahalsen酒店一次备齐；小站不承担补给。",
     "晚餐放在Oslo S / Bjørvika步行圈，不为指定餐厅制造硬截止。",
   ],
+  transit: day.transit.slice(0, 2),
+  sources: (day.sources || []).filter(
+    (source) =>
+      !source.label.includes("Oslo lufthavn") &&
+      !source.label.includes("OSL机场") &&
+      !source.label.includes("Oslo Airport"),
+  ),
   sights: (day.sights || []).filter((sight) => !sight.name.includes("OSL")),
   foods: [
     ...day.foods.slice(0, 2),
